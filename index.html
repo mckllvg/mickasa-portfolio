@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mickasa</title>
 
+  <!-- fonts and icons -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="logo1.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <!-- tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
       theme: {
@@ -30,57 +31,14 @@
           fontFamily: {
             sora:  ['Sora', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
-          },
-          keyframes: {
-            blink: { '0%,100%': { opacity: '1' }, '50%': { opacity: '0' } },
-          },
-          animation: {
-            blink: 'blink 1s step-end infinite',
-          },
+          }
         },
       },
     }
   </script>
-
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, .font-sora { font-family: 'Sora', sans-serif; }
-
-    /* Typed cursor */
-    .cursor {
-      display: inline-block;
-      width: 3px;
-      height: 0.85em;
-      background: #2E6E50;
-      margin-left: 2px;
-      vertical-align: baseline;
-      animation: blink 1s step-end infinite;
-    }
-
-    /* Smooth nav underline */
-    nav a { position: relative; }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0; bottom: -2px;
-      width: 0; height: 1.5px;
-      background: #2E6E50;
-      transition: width 0.25s ease;
-    }
-    nav a:hover::after { width: 100%; }
-
-    /* Skill card hover lift */
-    .skill-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(46,110,80,0.12); }
-
-    /* Project card hover */
-    .proj-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .proj-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(46,110,80,0.14); }
-
-    /* Section fade-in (AOS fallback) */
-    [data-aos] { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
-  </style>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-sageBase text-textDark font-inter">
@@ -92,7 +50,7 @@
     <nav>
       <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
         <li><a href="#home"         class="hover:text-tealCta transition-colors">home</a></li>
-         <li><a href="#about"         class="hover:text-tealCta transition-colors">about</a></li>
+        <li><a href="#about"        class="hover:text-tealCta transition-colors">about</a></li>
         <li><a href="#technologies" class="hover:text-tealCta transition-colors">tech</a></li>
         <li><a href="#projects"     class="hover:text-tealCta transition-colors">projects</a></li>
         <li><a href="#contact"      class="hover:text-tealCta transition-colors">contact</a></li>
@@ -102,7 +60,6 @@
 
   <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
     <div class="max-w-3xl" data-aos="fade-up">
-
       <span class="inline-block bg-sageAccent text-tealDark text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
         data analyst · machine learning · ui/ux design
       </span>
@@ -129,17 +86,14 @@
     </div>
   </main>
 
-<!-- ── About Me ── -->
+  <!--about me-->
   <section id="about" class="py-16 bg-sageBase px-6">
     <div class="max-w-6xl mx-auto" data-aos="fade-up">
       <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark text-center mb-12">about me</h2>
       
-      <!-- Outer Grid: Left Column (1 part), Right Column (2 parts) -->
       <div class="grid md:grid-cols-3 gap-6 items-start">
-        
-        <!-- LEFT SIDE COLUMN: Profile + Awards stacked together -->
+        <!-- left side -->
         <div class="flex flex-col gap-6">
-          
           <!-- Profile Card -->
           <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder text-center flex flex-col items-center shadow-sm">
             <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-tealCta">
@@ -156,7 +110,7 @@
             </div>
           </div>
 
-          <!-- Awards Card (Now aligned perfectly below the profile card) -->
+          <!-- Awards Card -->
           <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder shadow-sm">
             <div class="flex items-center gap-3 mb-4">
               <span class="text-tealCta text-xl"><i class="fa-solid fa-award"></i></span>
@@ -180,13 +134,10 @@
               </li>
             </ul>
           </div>
+        </div>
 
-        </div> <!-- End of Left Side Column -->
-
-
-<!-- RIGHT SIDE COLUMN: Spans 2 columns for the content -->
+        <!-- right side -->
         <div class="md:col-span-2 space-y-6">
-          
           <!-- Education Card -->
           <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder shadow-sm">
             <div class="flex items-center gap-3 mb-4">
@@ -211,7 +162,6 @@
             </div>
             
             <div class="space-y-6 relative border-l-2 border-tealCta/20 ml-2 pl-4">
-
               <!-- 1. MIESCOR Internship -->
               <div class="relative">
                 <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-tealCta"></span>
@@ -251,26 +201,30 @@
                   <li>Handled admissions inquiries, managed document workflows and approvals, and organized financial records with data verification using Excel.</li>
                 </ul>
               </div>
-
             </div>
           </div>
-
-        </div> <!-- End of Right Column Content Area -->
+        </div>
+      </div>
+    </div>
   </section>
-  <section id="technologies" class="py-20 bg-sageBase">
+
+<section id="technologies" class="py-20 bg-sageBase">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">technologies</h2>
       <p class="text-textHint text-sm mb-10" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
 
+      <input type="radio" id="show-lang" name="skill-toggle" class="hidden" checked />
+      <input type="radio" id="show-design" name="skill-toggle" class="hidden" />
+
       <div class="flex justify-center gap-3 mb-10 flex-wrap" data-aos="fade-up" data-aos-delay="150">
-        <button onclick="filterSkills('lang')" id="tab-lang"
-          class="skill-tab active-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all">
+        <label for="show-lang" id="label-lang"
+          class="skill-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all cursor-pointer select-none">
           Languages & Frameworks
-        </button>
-        <button onclick="filterSkills('design')" id="tab-design"
-          class="skill-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all">
+        </label>
+        <label for="show-design" id="label-design"
+          class="skill-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all cursor-pointer select-none">
           Design & Tools
-        </button>
+        </label>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid">
@@ -351,63 +305,23 @@
           <p class="text-sm font-semibold text-textDark">Github</p>
           <p class="text-xs text-textHint">Version Control</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <style>
-    .skill-tab {
-      background-color: transparent;
-      color: #4A5E4A;
-    }
-    .skill-tab:hover {
-      background-color: #C0D4C0;
-      color: #1A2E1A;
-    }
-    .active-tab {
-      background-color: #2E6E50;
-      color: #E8EDE8;
-      border-color: #2E6E50;
-    }
-    .skill-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
-    }
-    .skill-card.hidden {
-      display: none;
-    }
-  </style>
-
-  <script>
-    window.onload = function() { filterSkills('lang'); };
-    function filterSkills(cat) {
-      const cards = document.querySelectorAll('#skills-grid .skill-card');
-      cards.forEach(card => {
-        if (cat === 'all' || card.dataset.cat === cat) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-      document.querySelectorAll('.skill-tab').forEach(btn => btn.classList.remove('active-tab'));
-      document.getElementById('tab-' + cat).classList.add('active-tab');
-    }
-  </script>
-
+  <!--Projects-->
   <section id="projects" class="py-20 bg-sageBase px-6">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">projects</h2>
       <p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">things I've built & designed</p>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up">
           <img src="wakeup.png" alt="Wake Up Call" class="w-full h-40 object-cover rounded-xl mb-4" />
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">ML · Mobile App</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Wake Up Call</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">Sleep apnea prediction using LightGBM, deployed as a web app.</p>
-          <a href="https://github.com/yourusername/wakeup-call" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
+          <a href="https://github.com/yourusername/wakeup-call" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
         </div>
 
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="80">
@@ -415,8 +329,7 @@
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">ML · Streamlit</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">LSTorM</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">Typhoon disaster resource allocation using LSTM + Streamlit.</p>
-          <a href="https://github.com/yourusername/lstorm" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
+          <a href="https://github.com/yourusername/lstorm" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
         </div>
 
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="160">
@@ -424,8 +337,7 @@
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">DLSU-D Website</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">Showcasing the colleges of DLSU-D through a structured site design.</p>
-          <a href="https://www.figma.com/proto/5TczZDnT5sT8NJLIXLnCms/Logo?page-id=0%3A1&node-id=24-2&p=f&viewport=633%2C843%2C0.17&t=RTmthZOUMs1bzgwr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=24%3A315" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
+          <a href="https://www.figma.com/proto/5TczZDnT5sT8NJLIXLnCms/Logo?page-id=0%3A1&node-id=24-2&p=f&viewport=633%2C843%2C0.17&t=RTmthZOUMs1bzgwr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=24%3A315" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
         </div>
 
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up">
@@ -433,8 +345,7 @@
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Stellair</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">Airline reservation system prototype designed in Figma.</p>
-          <a href="https://www.figma.com/proto/aN6KmsufokK6nXSyyjHuli/ARS?page-id=0%3A1&node-id=15-779&starting-point-node-id=15%3A779&t=o4kpNczV50ZKmno7-1" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
+          <a href="https://www.figma.com/proto/aN6KmsufokK6nXSyyjHuli/ARS?page-id=0%3A1&node-id=15-779&starting-point-node-id=15%3A779&t=o4kpNczV50ZKmno7-1" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
         </div>
 
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="80">
@@ -442,8 +353,7 @@
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">Accessibility · Figma</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Messenger Revamp</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">Messenger redesigned for senior citizens with accessibility at its core.</p>
-          <a href="https://www.figma.com/proto/xyg89RgrTOoWqYg7bnhOMX/Figma?page-id=0%3A1&node-id=2-847&p=f&viewport=577%2C248%2C0.15&t=l56W8GdrwPC4JzFl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A847" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
+          <a href="https://www.figma.com/proto/xyg89RgrTOoWqYg7bnhOMX/Figma?page-id=0%3A1&node-id=2-847&p=f&viewport=577%2C248%2C0.15&t=l56W8GdrwPC4JzFl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A847" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
         </div>
 
         <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="160">
@@ -451,19 +361,18 @@
           <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
           <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Sign-Up Container</h3>
           <p class="text-textMuted text-sm leading-relaxed mb-4">A modern, clean sign-up flow prototype built in Figma.</p>
-          <a href="https://www.figma.com/proto/Jr1d0HmIhx7LT0Jqm6Z2oD/Activity-3?page-id=0%3A1&node-id=1-1003&t=PRJss7F3Y3WPvLfE-1" target="_blank"
-             class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
+          <a href="https://www.figma.com/proto/Jr1d0HmIhx7LT0Jqm6Z2oD/Activity-3?page-id=0%3A1&node-id=1-1003&t=PRJss7F3Y3WPvLfE-1" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
         </div>
-
       </div>
     </div>
   </section>
 
+  <!--Footer-->
   <footer id="contact" class="py-20 px-6 bg-sageBase border-t border-sageBorder">
     <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
       <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-4">contact</h2>
       <p class="text-textMuted text-sm mb-8 leading-relaxed">
-      Open to work opportunities, collaborations, and impactful projects.<br>Feel free to reach out!
+        Open to work opportunities, collaborations, and impactful projects.<br>Feel free to reach out!
       </p>
 
       <div class="flex justify-center gap-6 text-2xl text-textMuted mb-10">
@@ -477,58 +386,16 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </div>
-
-      <p class="text-xs text-textHint">© 2026 mickasa.</p>
+      <p class="text-xs text-textHint">© 2025 mickasa.</p>
     </div>
   </footer>
 
+  <!-- scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    window.onload = function() { filterSkills('lang'); };
     AOS.init({ once: true, duration: 600, offset: 60 });
-
-    // Native Inline Typing Effect for .typed-text
-    const words = ["mickasa", "my portfolio"];
-    let i = 0, timer;
-
-    function typingEffect() {
-      let word = words[i].split("");
-      var loopTyping = function() {
-        if (word.length > 0) {
-          document.querySelector('.typed-text').innerHTML += word.shift();
-        } else {
-          setTimeout(deletingEffect, 2000);
-          return false;
-        }
-        timer = setTimeout(loopTyping, 150);
-      };
-      loopTyping();
-    }
-
-    function deletingEffect() {
-      let word = words[i].split("");
-      var loopDeleting = function() {
-        if (word.length > 0) {
-          word.pop();
-          document.querySelector('.typed-text').innerHTML = word.join("");
-        } else {
-          if (words.length > (i + 1)) {
-            i++;
-          } else {
-            i = 0;
-          }
-          setTimeout(typingEffect, 500);
-          return false;
-        }
-        timer = setTimeout(loopDeleting, 100);
-      };
-      loopDeleting();
-    }
-    
-    // Fallback safe init for typed element
-    if(document.querySelector('.typed-text')) {
-      typingEffect();
-    }
   </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
