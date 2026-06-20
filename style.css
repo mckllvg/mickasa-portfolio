@@ -1,5 +1,5 @@
 /* === Import Fonts === */
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* === Tailwind Directives === */
 @tailwind base;
@@ -9,65 +9,145 @@
 /* === Custom Theme via Tailwind Layer === */
 @layer base {
   html {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   body {
-    background-color: #fefcf9;
-    color: #3b2d23;
+    background-color: #E8EDE8;
+    color: #1A2E1A;
   }
 }
 
 /* === Custom Font Classes === */
 @layer utilities {
-  .font-marcellus {
-    font-family: 'Marcellus', serif;
+  .font-sora {
+    font-family: 'Sora', sans-serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
   }
 }
 
 /* === Custom Colors === */
 @layer utilities {
-  .bg-cream {
-    background-color: #fefcf9;
+  .bg-sageBase {
+    background-color: #E8EDE8;
   }
 
-  .text-darkBrown {
-    color: #3b2d23;
+  .bg-sageMid {
+    background-color: #DDE5DD;
   }
 
-  .text-softBrown {
-    color: #7b6b5c;
+  .bg-sageAccent {
+    background-color: #C0D4C0;
   }
 
-  .bg-buttonBg {
-    background-color: #f4ece2;
+  .text-textDark {
+    color: #1A2E1A;
   }
 
-  .border-buttonBorder {
-    border-color: #3b2d23;
+  .text-textMuted {
+    color: #4A5E4A;
   }
 
-  .text-buttonBorder {
-    color: #4b3a2f;
+  .text-textHint {
+    color: #6B7A6B;
+  }
+
+  .text-tealCta {
+    color: #2E6E50;
+  }
+
+  .bg-tealCta {
+    background-color: #2E6E50;
+  }
+
+  .bg-tealDark {
+    background-color: #1A4A34;
+  }
+
+  .border-sageBorder {
+    border-color: #B4C4B4;
   }
 }
 
 /* === Custom Animation === */
 @keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
 
-scale-up-hor-center {
-	-webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+/* === Scale Animation === */
+@keyframes scale-up-hor-center {
+  0%   { transform: scaleX(0.4); }
+  100% { transform: scaleX(1);   }
+}
 
+.scale-up-hor-center {
+  -webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* === Nav Link Underline Effect === */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1.5px;
+  background-color: #2E6E50;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* === Skill Card Hover === */
+.skill-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(46, 110, 80, 0.12);
+}
+
+/* === Project Card Hover === */
+.proj-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(46, 110, 80, 0.14);
+}
+
+/* === Scrollbar (optional, nice touch) === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #DDE5DD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B4C4B4;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E6E50;
+}
 
