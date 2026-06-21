@@ -53,50 +53,36 @@
     <a href="#home">
       <h1 class="text-2xl font-bold text-textDark">mickasa.</h1>
     </a>
-    <nav>
-      <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
-        <li><a href="#index"         class="hover:text-tealCta transition-colors">home</a></li>
-        <li><a href="#about"        class="hover:text-tealCta transition-colors">about</a></li>
-        <li><a href="#technologies" class="hover:text-tealCta transition-colors">tech</a></li>
-        <li><a href="#projects"     class="hover:text-tealCta transition-colors">projects</a></li>
-        <li><a href="#contact"      class="hover:text-tealCta transition-colors">contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
-    <div class="max-w-3xl" data-aos="fade-up">
-      <span class="inline-block bg-sageAccent text-tealDark text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
-       data analyst · machine learning · insight-driven solutions
-      </span>
-
-      <h1 class="font-sora text-5xl md:text-6xl font-bold text-textDark leading-tight mb-5">
-        welcome to
-        <span class="text-tealCta typed-text"></span><span class="cursor"></span>
-      </h1>
-
-      <p class="text-textMuted text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-       I’m <span class="font-semibold text-textDark">Alyanna Mickaela Olviga</span>, a Data Analyst with a focus on machine learning, data analysis, and insight generation.
-      </p>
-
-      <div class="flex flex-wrap gap-3 justify-center">
-        <a href="Olviga_Resume.pdf"
-           class="bg-tealCta text-sageBase px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tealDark transition-colors">
-          Download Resume
-        </a>
-        <a href="#projects"
-           class="bg-transparent text-tealCta border border-tealCta px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-sageAccent transition-colors">
-          View My Work
-        </a>
-      </div>
+    <div class="flex items-center gap-4">
+      <button id="mobile-nav-toggle" type="button" class="md:hidden text-textMuted hover:text-tealCta transition-colors" aria-controls="mobile-nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
+          <li><a href="#home"         class="hover:text-tealCta transition-colors">home</a></li>
+          <li><a href="#about"        class="hover:text-tealCta transition-colors">about</a></li>
+          <li><a href="#technologies" class="hover:text-tealCta transition-colors">tech</a></li>
+          <li><a href="#projects"     class="hover:text-tealCta transition-colors">projects</a></li>
+          <li><a href="#contact"      class="hover:text-tealCta transition-colors">contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </main>
+  </header>
+  <div id="mobile-nav-menu" class="hidden md:hidden bg-sageBase/95 border-b border-sageBorder/40 shadow-sm">
+    <ul class="flex flex-col gap-2 px-6 py-4 text-sm font-semibold text-textMuted tracking-wide">
+      <li><a href="#home"         class="block hover:text-tealCta transition-colors">home</a></li>
+      <li><a href="#about"        class="block hover:text-tealCta transition-colors">about</a></li>
+      <li><a href="#technologies" class="block hover:text-tealCta transition-colors">tech</a></li>
+      <li><a href="#projects"     class="block hover:text-tealCta transition-colors">projects</a></li>
+      <li><a href="#contact"      class="block hover:text-tealCta transition-colors">contact</a></li>
+    </ul>
+  </div>
 
-  <div data-include="sections/about.html"></div>
-  <div data-include="sections/technologies.html"></div>
-  <div data-include="sections/projects.html"></div>
-  <div data-include="sections/contact.html"></div>
-
+    <div data-include="sections/home.html"></div>
+    <div data-include="sections/about.html"></div>
+    <div data-include="sections/technologies.html"></div>
+    <div data-include="sections/projects.html"></div>
+    <div data-include="sections/contact.html"></div>
   <!-- Structural Animation Scripts Execution Layer -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
