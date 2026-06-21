@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mickasa</title>
 
-  <!-- fonts and icons -->
+  <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="logo1.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- tailwind -->
+  <!-- Tailwind CSS Framework -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            sageBase:   '#E8EDE8',
-            sageMid:    '#DDE5DD',
+            sageBase:   '#F4F8F5', /* Clean mint-white tint background */
+            sageMid:    '#E7EFE9', /* Soft complementing contrast mid-tone */
             sageAccent: '#C0D4C0',
             sageBorder: '#B4C4B4',
             tealCta:    '#2E6E50',
@@ -37,15 +37,15 @@
     }
   </script>
   
-  <!-- css -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-sageBase text-textDark font-inter">
-
+  
   <header class="sticky top-0 z-50 w-full px-8 md:px-16 flex justify-between items-center py-4 bg-sageBase/80 backdrop-blur-md border-b border-sageBorder/40">
     <a href="#home">
-      <h1 class="text-2xl font-bold text-textDark">mickasa</h1>
+      <h1 class="text-2xl font-bold text-textDark">mickasa.</h1>
     </a>
     <nav>
       <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
@@ -76,324 +76,580 @@
       <div class="flex flex-wrap gap-3 justify-center">
         <a href="Olviga_Resume.pdf"
            class="bg-tealCta text-sageBase px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tealDark transition-colors">
-          View Resume
+          Download Resume
         </a>
         <a href="#projects"
            class="bg-transparent text-tealCta border border-tealCta px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-sageAccent transition-colors">
-          See Projects
+          View My Work
         </a>
       </div>
     </div>
   </main>
 
-  <!--about me-->
-  <section id="about" class="py-16 bg-sageBase px-6">
-    <div class="max-w-6xl mx-auto" data-aos="fade-up">
-      <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark text-center mb-12">about me</h2>
-      
-      <div class="grid md:grid-cols-3 gap-6 items-start">
-        <!-- left side -->
-        <div class="flex flex-col gap-6">
-          <!-- Profile Card -->
-          <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder text-center flex flex-col items-center shadow-sm">
-            <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-tealCta">
-              <img src="Micka.jpg" alt="Alyanna Mickaela Olviga" class="w-full h-full object-cover" />
-            </div>
-            <h3 class="font-sora text-xl font-bold text-textDark">Alyanna Mickaela B. Olviga</h3>
-            <p class="text-xs text-tealCta font-semibold uppercase tracking-wider mt-1">Data Analyst & Software Engineer</p>
-            
-            <div class="w-full border-t border-sageBorder/50 my-4"></div>
-            
-            <div class="bg-sageBase/60 w-full rounded-xl p-3 border border-sageBorder/30">
-              <p class="text-xs text-textHint font-medium uppercase">Current GPA</p>
-              <p class="text-2xl font-bold text-tealDark font-sora mt-0.5">4.73</p> 
-            </div>
-          </div>
-
-          <!-- Awards Card -->
-          <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder shadow-sm">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-tealCta text-xl"><i class="fa-solid fa-award"></i></span>
-              <h4 class="font-sora text-base font-bold text-textDark">Awards & Recognition</h4>
-            </div>
-            
-            <ul class="space-y-4 pl-1">
-              <li class="flex items-start gap-2.5">
-                <span class="text-tealCta mt-0.5 text-xs"><i class="fa-solid fa-circle-check"></i></span>
-                <div>
-                  <h5 class="font-semibold text-textDark text-xs">Consistent Dean's Lister</h5>
-                  <p class="text-[11px] text-textMuted leading-relaxed mt-0.5">Recognized consistently for maintaining exceptional academic standing throughout the program.</p>
-                </div>
-              </li>
-              <li class="flex items-start gap-2.5">
-                <span class="text-tealCta mt-0.5 text-xs"><i class="fa-solid fa-circle-check"></i></span>
-                <div>
-                  <h5 class="font-semibold text-textDark text-xs">Excellence in Student Leadership</h5>
-                  <p class="text-[11px] text-textMuted leading-relaxed mt-0.5">Recognized for leadership as Public Relations Officer (Internal), CS Program Council.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- right side -->
-        <div class="md:col-span-2 space-y-6">
-          <!-- Education Card -->
-          <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder shadow-sm">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-tealCta text-xl"><i class="fa-solid fa-graduation-cap"></i></span>
-              <h4 class="font-sora text-lg font-bold text-textDark">Education</h4>
-            </div>
-            <div class="flex flex-wrap justify-between items-baseline gap-x-2">
-              <h5 class="font-semibold text-textDark text-sm">Bachelor of Science in Computer Science</h5>
-              <span class="text-xs text-textHint font-medium">2022 - 2026</span>
-            </div>
-            <p class="text-xs text-tealCta font-semibold mb-2">De La Salle University - Dasmariñas</p>
-            <ul class="text-textMuted text-sm space-y-0.5 list-disc pl-4 leading-relaxed">
-              <li>Specializing in Intelligent Systems</li>
-            </ul>
-          </div>
-
-          <!-- Experience Section -->
-          <div class="bg-sageMid rounded-2xl p-6 border border-sageBorder shadow-sm">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-tealCta text-xl"><i class="fa-solid fa-briefcase"></i></span>
-              <h4 class="font-sora text-lg font-bold text-textDark">Experience & Leadership</h4>
-            </div>
-            
-            <div class="space-y-6 relative border-l-2 border-tealCta/20 ml-2 pl-4">
-              <!-- 1. MIESCOR Internship -->
-              <div class="relative">
-                <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-tealCta"></span>
-                <div class="flex flex-wrap justify-between items-baseline gap-x-2">
-                  <h5 class="font-semibold text-textDark text-sm">Software Engineer Intern</h5>
-                  <span class="text-xs text-textHint font-medium">June - Aug 2025</span>
-                </div>
-                <p class="text-xs text-tealCta font-semibold mb-1">MIESCOR · Pasig, Philippines</p>
-                <ul class="text-textMuted text-sm space-y-0.5 list-disc pl-4 leading-relaxed">
-                  <li>Analyzed SAP workflows to design system requirements and developed a centralized Laravel-based platform that streamlined cross-department request and approval processes.</li>
-                </ul>
-              </div>
-
-              <!-- 2. CS Program Council -->
-              <div class="relative">
-                <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-tealCta/60"></span>
-                <div class="flex flex-wrap justify-between items-baseline gap-x-2">
-                  <h5 class="font-semibold text-textDark text-sm">Public Relations Officer (Internal)</h5>
-                  <span class="text-xs text-textHint font-medium">2024 - 2025</span>
-                </div>
-                <p class="text-xs text-tealCta font-semibold mb-1">Computer Science Program Council · DLSU-D</p>
-                <ul class="text-textMuted text-sm space-y-0.5 list-disc pl-4 leading-relaxed">
-                  <li>Managed internal communications between computer science students, faculty, and council.</li>
-                  <li>Spearheaded logistics and led execution for multiple program-wide academic and social events.</li>
-                </ul>
-              </div>
-
-              <!-- 3. Student Assistant / Scholarship -->
-              <div class="relative">
-                <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-tealCta/40"></span>
-                <div class="flex flex-wrap justify-between items-baseline gap-x-2">
-                  <h5 class="font-semibold text-textDark text-sm">Student Assistant & Scholar</h5>
-                  <span class="text-xs text-textHint font-medium">8x Grantee</span>
-                </div>
-                <p class="text-xs text-tealCta font-semibold mb-1">De La Salle University - Dasmariñas</p>
-                <ul class="text-textMuted text-sm space-y-0.5 list-disc pl-4 leading-relaxed">
-                  <li>Handled admissions inquiries, managed document workflows and approvals, and organized financial records with data verification using Excel.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section id="technologies" class="py-20 bg-sageBase">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">technologies</h2>
-      <p class="text-textHint text-sm mb-10" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
-
-      <input type="radio" id="show-lang" name="skill-toggle" class="hidden" checked />
-      <input type="radio" id="show-design" name="skill-toggle" class="hidden" />
-
-      <div class="flex justify-center gap-3 mb-10 flex-wrap" data-aos="fade-up" data-aos-delay="150">
-        <label for="show-lang" id="label-lang"
-          class="skill-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all cursor-pointer select-none">
-          Languages & Frameworks
-        </label>
-        <label for="show-design" id="label-design"
-          class="skill-tab px-5 py-2 rounded-full text-sm font-semibold border border-sageBorder transition-all cursor-pointer select-none">
-          Design & Tools
-        </label>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="skills-grid">
-
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="python.png" alt="Python" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Python</p>
-          <p class="text-xs text-textHint">Language</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="java.png" alt="Java" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Java</p>
-          <p class="text-xs text-textHint">Language</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="javascript.png" alt="JavaScript" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">JavaScript</p>
-          <p class="text-xs text-textHint">Language</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="html.png" alt="HTML" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">HTML</p>
-          <p class="text-xs text-textHint">Markup</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="css.png" alt="CSS" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">CSS</p>
-          <p class="text-xs text-textHint">Stylesheet</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="php.png" alt="PHP" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">PHP</p>
-          <p class="text-xs text-textHint">Language</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="tailwind.png" alt="Tailwind" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Tailwind CSS</p>
-          <p class="text-xs text-textHint">Framework</p>
-        </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="lang">
-          <img src="postgresql.png" alt="PostgreSQL" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">PostgreSQL</p>
-          <p class="text-xs text-textHint">Database</p>
-        </div>
+<!-- ── About Me Section (Clean SaaS Dashboard Revamp) ── -->
+<section id="about" class="py-24 bg-sageBase px-6">
+  <div class="max-w-6xl mx-auto" data-aos="fade-up">
     
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="figma.png" alt="Figma" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Figma</p>
-          <p class="text-xs text-textHint">Design Tool</p>
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark text-center mb-16">about me</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8 items-start">
+      
+      <!-- ================= LEFT COLUMN: PROFILE & AWARDS ================= -->
+      <div class="flex flex-col gap-8">
+        
+        <!-- 1. Profile Card -->
+        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center group">
+          
+          <!-- Animated Avatar Frame -->
+          <div class="relative mb-3">
+            <div class="absolute inset-0 rounded-full bg-tealCta/20 blur-md group-hover:scale-110 transition-transform duration-500"></div>
+            <div class="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
+              <img src="Micka.jpg" alt="Alyanna Mickaela Olviga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+
+          <h3 class="font-sora text-xl font-bold text-textDark mt-1">Alyanna Mickaela B. Olviga</h3>
+          <p class="text-xs font-bold text-tealCta uppercase tracking-wider mt-1">Data Analyst & Software Engineer</p>
+          
+          <div class="w-full border-t border-sageMid/60 my-5"></div>
+          
+          <!-- SaaS Metric Callout (GPA Widget) -->
+          <div class="bg-sageBase w-full rounded-2xl p-4 border border-sageMid/50 flex items-center justify-between">
+            <div class="text-left pl-1">
+              <p class="text-[10px] font-bold text-textHint uppercase tracking-wider">Academic Standing</p>
+              <p class="text-xs font-bold text-textDark mt-0.5">Current GPA</p>
+            </div>
+            <div class="bg-white px-4 py-1.5 rounded-xl border border-sageMid shadow-xs">
+              <span class="text-xl font-extrabold text-tealCta font-sora">3.73</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="canva.png" alt="Canva" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Canva</p>
-          <p class="text-xs text-textHint">Design Tool</p>
+
+        <!-- 2. Awards Card -->
+        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center gap-3.5 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
+              <i class="fa-solid fa-award text-lg"></i>
+            </div>
+            <h4 class="font-sora text-lg font-bold text-textDark">Awards & Recognition</h4>
+          </div>
+          
+          <ul class="space-y-4 pl-1">
+            <li class="flex items-start gap-3">
+              <span class="text-tealCta mt-0.5 text-sm"><i class="fa-solid fa-circle-check"></i></span>
+              <div>
+                <h5 class="font-bold text-textDark text-xs uppercase tracking-wide">Consistent Dean's Lister</h5>
+                <p class="text-xs text-textMuted leading-relaxed mt-1 font-medium">Recognized consistently for maintaining exceptional academic standing throughout the program.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-tealCta mt-0.5 text-sm"><i class="fa-solid fa-circle-check"></i></span>
+              <div>
+                <h5 class="font-bold text-textDark text-xs uppercase tracking-wide">Excellence in Leadership</h5>
+                <p class="text-xs text-textMuted leading-relaxed mt-1 font-medium">Recognized for leadership as Public Relations Officer (Internal), CS Program Council.</p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="vscode.png" alt="VSCode" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">VSCode</p>
-          <p class="text-xs text-textHint">Code Editor</p>
+
+      </div>
+
+      <!--RIGHT COLUMN: EDUCATION & TIMELINE-->
+      <div class="md:col-span-2 space-y-8">
+        
+        <!--Education Card -->
+        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+            </div>
+            <h4 class="font-sora text-lg font-bold text-textDark">Education</h4>
+          </div>
+
+          <!-- Structured Inner Container -->
+          <div class="bg-sageBase/60 rounded-2xl p-5 border border-sageMid/50">
+            <div class="flex flex-wrap justify-between items-baseline gap-x-2 mb-1">
+              <h5 class="font-bold text-textDark text-base font-sora">Bachelor of Science in Computer Science</h5>
+              <span class="text-xs font-bold text-tealCta bg-white px-3.5 py-1 rounded-full border border-sageMid shadow-xs">2022 - 2026</span>
+            </div>
+            <p class="text-xs font-bold text-textMuted mb-4.5 pl-0.5">De La Salle University - Dasmariñas</p>
+            
+            <!-- Specialization Pill -->
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-tealDark bg-tealCta/10 px-3 py-1.5 rounded-xl border border-tealCta/15">
+              <i class="fa-solid fa-microchip text-[11px]"></i>
+              <span>Specializing in Intelligent Systems</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="google.png" alt="G Suite" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">G Suite</p>
-          <p class="text-xs text-textHint">Productivity</p>
+
+        <!--Experience Timeline Track -->
+        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center gap-3.5 mb-8">
+            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
+              <i class="fa-solid fa-briefcase text-lg"></i>
+            </div>
+            <h4 class="font-sora text-lg font-bold text-textDark">Experience & Leadership</h4>
+          </div>
+          
+          <!-- ── Timeline Stream (High-Signal Scannable Revamp) ── -->
+          <div class="space-y-6 relative border-l-2 border-sageMid ml-3 pl-6">
+
+            <!-- 1. MIESCOR -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta group-hover:scale-125 group-hover:shadow-md transition-all"></span>
+              
+              <!-- Condensed Header Row -->
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
+                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">Software Engineer Intern</h5>
+                <span class="text-xs font-bold text-tealCta">@ MIESCOR</span>
+                <span class="text-[11px] font-medium text-textHint ml-auto bg-sageBase px-2.5 py-0.5 rounded-md">June - Aug 2025</span>
+              </div>
+              
+              <!-- One-Sentence Impact Copy -->
+              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
+                Engineered a centralized Laravel platform to automate cross-department SAP approval workflows.
+              </p>
+            </div>
+
+            <!-- 2. CSPC -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta/70 group-hover:scale-125 group-hover:border-tealCta group-hover:shadow-md transition-all"></span>
+              
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
+                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">PR Officer (Internal)</h5>
+                <span class="text-xs font-bold text-tealCta">@ CS Program Council</span>
+                <span class="text-[11px] font-medium text-textHint ml-auto bg-sageBase px-2.5 py-0.5 rounded-md">2024 - 2025</span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
+                Spearheaded student-faculty communications and managed event logistics for the department.
+              </p>
+            </div>
+
+            <!-- 3. Student Assistant -->
+            <div class="relative group">
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta/40 group-hover:scale-125 group-hover:border-tealCta group-hover:shadow-md transition-all"></span>
+              
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
+                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">Student Assistant</h5>
+                <span class="text-xs font-bold text-tealCta">@ DLSU-D</span>
+                <span class="text-[10px] font-extrabold text-tealDark bg-sageAccent/40 px-2 py-0.5 rounded-md ml-auto">8x Scholar</span>
+              </div>
+
+              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
+                Managed university document workflows, data verification, and student admissions processing.
+              </p>
+            </div>
+
+          </div>
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="msapps.png" alt="MS Apps" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">MS Apps</p>
-          <p class="text-xs text-textHint">Productivity</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ── Technologies Section (Premium Glass-Tile Revamp) ── -->
+<section id="technologies" class="py-24 bg-sageBase px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">technologies</h2>
+    <p class="text-textHint text-sm mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
+
+    <!-- Hidden Radio Inputs for Pure CSS Filtering Engine -->
+    <input type="radio" id="show-lang" name="skill-toggle" class="hidden" checked />
+    <input type="radio" id="show-design" name="skill-toggle" class="hidden" />
+
+    <!-- iOS "Segmented Control" Filter Track -->
+    <div class="inline-flex items-center justify-center p-1.5 bg-white/80 backdrop-blur-md rounded-full border border-sageMid shadow-xs mb-14" data-aos="fade-up" data-aos-delay="150">
+      <label for="show-lang" id="label-lang"
+        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
+        Languages & Frameworks
+      </label>
+      <label for="show-design" id="label-design"
+        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
+        Design & Tools
+      </label>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5" id="skills-grid">
+
+      <!-- ================= LANGUAGES & FRAMEWORKS (8) ================= -->
+      
+      <!-- 1. Python -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="python.png" alt="Python" class="w-7 h-7 object-contain" />
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="powerbi.png" alt="Power BI" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Power BI</p>
-          <p class="text-xs text-textHint">Data Visualization</p>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Python</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      </div>
+
+      <!-- 2. Java -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="java.png" alt="Java" class="w-7 h-7 object-contain" />
         </div>
-        <div class="skill-card bg-sageMid rounded-xl p-4 flex flex-col items-center border border-sageBorder" data-cat="design">
-          <img src="github.png" alt="Github" class="w-10 h-10 mb-2" />
-          <p class="text-sm font-semibold text-textDark">Github</p>
-          <p class="text-xs text-textHint">Version Control</p>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Java</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      </div>
+
+      <!-- 3. JavaScript -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="javascript.png" alt="JavaScript" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">JavaScript</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      </div>
+
+      <!-- 4. HTML -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="150">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="html.png" alt="HTML" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">HTML</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Markup</p>
+      </div>
+
+      <!-- 5. CSS -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="css.png" alt="CSS" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">CSS</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Stylesheet</p>
+      </div>
+
+      <!-- 6. PHP -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="50">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="php.png" alt="PHP" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PHP</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      </div>
+
+      <!-- 7. Laravel (Corrected Tab) -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="laravel.png" alt="Laravel" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Laravel</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Web Framework</p>
+      </div>
+
+      <!-- 8. Tailwind CSS -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="150">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="tailwind.png" alt="Tailwind" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Tailwind CSS</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Framework</p>
+      </div>
+
+
+      <!-- ================= DESIGN, TOOLS & INFRASTRUCTURE (8) ================= -->
+      
+      <!-- 1. Figma -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="figma.png" alt="Figma" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Figma</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
+      </div>
+
+      <!-- 2. Canva -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="canva.png" alt="Canva" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Canva</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
+      </div>
+
+      <!-- 3. VSCode -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="vscode.png" alt="VSCode" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">VSCode</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Code Editor</p>
+      </div>
+
+      <!-- 4. PostgreSQL (Corrected Tab) -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="postgresql.png" alt="PostgreSQL" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Database</p>
+      </div>
+
+      <!-- 5. Power BI -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="powerbi.png" alt="Power BI" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Power BI</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Data Vis</p>
+      </div>
+
+      <!-- 6. GitHub -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="github.png" alt="GitHub" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">GitHub</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Version Control</p>
+      </div>
+
+      <!-- 7. G Suite -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="google.png" alt="G Suite" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">G Suite</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
+      </div>
+
+      <!-- 8. MS Apps -->
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
+        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
+          <img src="msapps.png" alt="MS Apps" class="w-7 h-7 object-contain" />
+        </div>
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">MS Apps</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+<!--Projects Section-->
+<section id="projects" class="py-20 bg-sageBase px-6 scroll-mt-12">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">projects</h2>
+    <p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">things I've built & designed</p>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="projects-wrapper">
+
+      <!--ALWAYS VISIBLE-->
+
+      <!-- 1. Spotify -->
+      <div class="proj-card group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden" data-aos="fade-up">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="spotify-analysis.png" alt="Spotify Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
+          <span class="absolute top-3 right-3 bg-amber-400/90 text-amber-900 text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-sm">
+            🚧 In Progress
+          </span>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">Data Analysis · ML</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">Beyond Genre</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Leverages K-Means clustering to map 114k+ tracks into mood quadrants and analyze how audio features dictate popularity.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://github.com/mckllvg/SpotifyTrack" target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!--Projects-->
-  <section id="projects" class="py-20 bg-sageBase px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">projects</h2>
-      <p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">things I've built & designed</p>
-
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up">
-          <img src="wakeup.png" alt="Wake Up Call" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">ML · Mobile App</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Wake Up Call</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">Sleep apnea prediction using LightGBM, deployed as a web app.</p>
-          <a href="https://github.com/yourusername/wakeup-call" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
+      <!-- 2. SAP -->
+      <div class="proj-card group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="sap.png" alt="SAP System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
         </div>
-
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="80">
-          <img src="lstorm.png" alt="LSTorM" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">ML · Streamlit</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">LSTorM</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">Typhoon disaster resource allocation using LSTM + Streamlit.</p>
-          <a href="https://github.com/yourusername/lstorm" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Code →</a>
-        </div>
-
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="160">
-          <img src="ud.png" alt="DLSU-D Website" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">DLSU-D Website</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">Showcasing the colleges of DLSU-D through a structured site design.</p>
-          <a href="https://www.figma.com/proto/5TczZDnT5sT8NJLIXLnCms/Logo?page-id=0%3A1&node-id=24-2&p=f&viewport=633%2C843%2C0.17&t=RTmthZOUMs1bzgwr-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=24%3A315" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
-        </div>
-
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up">
-          <img src="stellair.png" alt="Stellair" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Stellair</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">Airline reservation system prototype designed in Figma.</p>
-          <a href="https://www.figma.com/proto/aN6KmsufokK6nXSyyjHuli/ARS?page-id=0%3A1&node-id=15-779&starting-point-node-id=15%3A779&t=o4kpNczV50ZKmno7-1" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
-        </div>
-
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="80">
-          <img src="messenger.png" alt="Messenger Revamp" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">Accessibility · Figma</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Messenger Revamp</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">Messenger redesigned for senior citizens with accessibility at its core.</p>
-          <a href="https://www.figma.com/proto/xyg89RgrTOoWqYg7bnhOMX/Figma?page-id=0%3A1&node-id=2-847&p=f&viewport=577%2C248%2C0.15&t=l56W8GdrwPC4JzFl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A847" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
-        </div>
-
-        <div class="proj-card bg-sageMid rounded-2xl p-6 border border-sageBorder text-left" data-aos="fade-up" data-aos-delay="160">
-          <img src="signup.png" alt="Sign-Up Container" class="w-full h-40 object-cover rounded-xl mb-4" />
-          <span class="text-xs font-semibold bg-sageAccent text-tealDark px-3 py-1 rounded-full">UI · Figma</span>
-          <h3 class="font-sora text-lg font-bold text-textDark mt-3 mb-1">Sign-Up Container</h3>
-          <p class="text-textMuted text-sm leading-relaxed mb-4">A modern, clean sign-up flow prototype built in Figma.</p>
-          <a href="https://www.figma.com/proto/Jr1d0HmIhx7LT0Jqm6Z2oD/Activity-3?page-id=0%3A1&node-id=1-1003&t=PRJss7F3Y3WPvLfE-1" target="_blank" class="text-tealCta text-sm font-semibold hover:underline">View Design →</a>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">Full Stack</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">SAP Management System</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Replaced fragmented workflows with a centralized Laravel platform to automate and streamline multi-department approval lifecycles.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://github.com/mckllvg/miescor-project" target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!--Footer-->
-  <footer id="contact" class="py-20 px-6 bg-sageBase border-t border-sageBorder">
-    <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-4">contact</h2>
-      <p class="text-textMuted text-sm mb-8 leading-relaxed">
-        Open to work opportunities, collaborations, and impactful projects.<br>Feel free to reach out!
-      </p>
-
-      <div class="flex justify-center gap-6 text-2xl text-textMuted mb-10">
-        <a href="mailto:olviga.am@gmail.com" class="hover:text-tealCta transition-colors" aria-label="Email">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="https://github.com/mckllvg" target="_blank" class="hover:text-tealCta transition-colors" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/mckllvg" target="_blank" class="hover:text-tealCta transition-colors" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
+      <!-- 3. Wake Up Call -->
+      <div class="proj-card group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="wuc.png" alt="Wake Up Call" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">ML · Web App</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">Wake Up Call</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Predicts sleep apnea risk with 98% accuracy utilizing a LightGBM model and clinical questionnaires.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://github.com/yourusername/wakeup-call" target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <p class="text-xs text-textHint">© 2025 mickasa.</p>
-    </div>
-  </footer>
 
-  <!-- scripts -->
+      <!--HIDDEN -->
+    <!-- 4. DLSU-D -->
+      <div class="proj-card extra-proj hidden group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="dlsud.png" alt="DLSU-D Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">UI · Figma</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">DLSU-D Website</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Showcasing the colleges of DLSU-D through a structured and navigable site design.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://www.figma.com/proto/..." target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Design <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Stellair -->
+      <div class="proj-card extra-proj hidden group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="stellair.png" alt="Stellair" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">UI · Figma</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">Stellair</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Airline reservation system prototype designed for seamless end-to-end booking flows in Figma.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://www.figma.com/proto/..." target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Design <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Messenger Revamp -->
+      <div class="proj-card extra-proj hidden group bg-sageMid rounded-2xl border border-sageBorder text-left flex flex-col overflow-hidden">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="messenger.png" alt="Messenger Revamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-sageMid/80 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-sageAccent text-tealDark px-3.5 py-1 rounded-full w-fit mb-3">Accessibility · Figma</span>
+          <h3 class="font-sora text-lg font-bold text-textDark mb-2 group-hover:text-tealCta transition-colors">Messenger Revamp</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Messenger redesigned for senior citizens with accessibility and ease of use at its core.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-sageBorder">
+            <a href="https://www.figma.com/proto/..." target="_blank" class="inline-flex items-center gap-1.5 text-tealCta text-xs font-semibold hover:gap-3 transition-all">
+              View Design <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Toggle Button -->
+    <div class="mt-12 text-center">
+      <button onclick="toggleMoreProjects()" id="proj-toggle-btn"
+        class="bg-transparent text-tealCta border-2 border-tealCta px-8 py-3 rounded-full text-sm font-semibold hover:bg-sageAccent transition-all cursor-pointer select-none">
+        See More ↓
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Expand Engine -->
+  <script>
+    function toggleMoreProjects() {
+      const extraCards = document.querySelectorAll('.extra-proj');
+      const toggleBtn = document.getElementById('proj-toggle-btn');
+      const isHidden = extraCards[0].classList.contains('hidden');
+
+      extraCards.forEach(card => card.classList.toggle('hidden'));
+
+      if (isHidden) {
+        toggleBtn.innerHTML = 'See Less ↑';
+      } else {
+        toggleBtn.innerHTML = 'See More ↓';
+        // Smoothly scrolls back to the word "projects" so the user doesn't lose their place
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</section>
+
+  <!-- ── Footer with Functional Email Form ── -->
+<footer id="contact" class="py-20 px-6 bg-sageBase border-t border-sageBorder">
+  <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
+    
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-4">contact</h2>
+    <p class="text-textMuted text-sm mb-8 leading-relaxed">
+      Open to work opportunities, collaborations, and impactful projects.<br>Feel free to reach out!
+    </p>
+
+    <!-- EMAIL FORM (Powered by FormSubmit.co) -->
+    <form action="https://formsubmit.co/olviga.am@gmail.com" method="POST" class="max-w-md mx-auto mb-12 text-left space-y-4 bg-white/80 backdrop-blur-xs p-6 rounded-3xl border border-sageMid shadow-xs">
+      
+      <!-- FormSubmit Configuration (Hidden) -->
+      <input type="hidden" name="_subject" value="New inquiry from Mickasa Portfolio!">
+      <input type="hidden" name="_captcha" value="false"> <!-- Disables the annoying robot picture test -->
+      <input type="hidden" name="_template" value="table">
+
+      <!-- Row 1: Name & Email -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-[11px] font-bold text-textMuted uppercase tracking-wider mb-1.5 pl-1">Your Name</label>
+          <input type="text" name="name" required placeholder="Alyanna Olviga" 
+                 class="w-full bg-sageBase/60 border border-sageBorder/60 rounded-2xl px-4 py-2.5 text-sm text-textDark placeholder:text-textHint/60 focus:outline-none focus:border-tealCta focus:bg-white transition-all" />
+        </div>
+        <div>
+          <label class="block text-[11px] font-bold text-textMuted uppercase tracking-wider mb-1.5 pl-1">Your Email</label>
+          <input type="email" name="email" required placeholder="olviga@example.com" 
+                 class="w-full bg-sageBase/60 border border-sageBorder/60 rounded-2xl px-4 py-2.5 text-sm text-textDark placeholder:text-textHint/60 focus:outline-none focus:border-tealCta focus:bg-white transition-all" />
+        </div>
+      </div>
+
+      <!-- Row 2: Message -->
+      <div>
+        <label class="block text-[11px] font-bold text-textMuted uppercase tracking-wider mb-1.5 pl-1">Message</label>
+        <textarea name="message" rows="3" required placeholder="Hi Micka, I'd love to chat about a project..." 
+                  class="w-full bg-sageBase/60 border border-sageBorder/60 rounded-2xl p-4 text-sm text-textDark placeholder:text-textHint/60 focus:outline-none focus:border-tealCta focus:bg-white transition-all resize-none"></textarea>
+      </div>
+
+      <!-- Submit CTA -->
+      <button type="submit" 
+              class="w-full bg-tealCta text-white font-semibold text-sm py-3 rounded-2xl hover:bg-tealDark active:scale-[0.99] transition-all duration-200 shadow-sm flex items-center justify-center gap-2 cursor-pointer">
+        <span>Send Message</span>
+        <i class="fa-solid fa-paper-plane text-xs"></i>
+      </button>
+
+    </form>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-6 text-2xl text-textMuted mb-8">
+      <a href="mailto:olviga.am@gmail.com" class="hover:text-tealCta transition-colors" aria-label="Email">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="https://github.com/mckllvg" target="_blank" class="hover:text-tealCta transition-colors" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/mckllvg" target="_blank" class="hover:text-tealCta transition-colors" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+
+    <p class="text-xs text-textHint">© 2026 mickasa | Last updated: June 2026</p>
+  </div>
+</footer>
+
+  <!-- Structural Animation Scripts Execution Layer -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    window.onload = function() { filterSkills('lang'); };
     AOS.init({ once: true, duration: 600, offset: 60 });
   </script>
   <script src="script.js"></script>
