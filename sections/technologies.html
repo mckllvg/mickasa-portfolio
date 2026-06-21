@@ -1,5 +1,5 @@
 <section id="technologies" class="py-24 bg-sageBase px-6">
-  <div class="max-w-5xl mx-auto text-center">
+  <div class="max-w-4xl mx-auto text-center">
     
     <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">technologies</h2>
     <p class="text-textHint text-sm mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
@@ -8,113 +8,193 @@
     <input type="radio" id="show-framework" name="skill-toggle" class="hidden" />
     <input type="radio" id="show-tools" name="skill-toggle" class="hidden" />
 
-    <div class="inline-flex items-center justify-center p-1.5 bg-white/80 backdrop-blur-md rounded-full border border-sageMid shadow-xs mb-14 flex-wrap gap-2" data-aos="fade-up" data-aos-delay="150">
-      <label for="show-lang" id="label-lang"
-        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
-        Languages
-      </label>
-      <label for="show-framework" id="label-framework"
-        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
-        Frameworks
-      </label>
-      <label for="show-tools" id="label-tools"
-        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
-        Tools
-      </label>
+    <div class="inline-flex items-center justify-center p-1.5 bg-white/80 backdrop-blur-md rounded-full border border-sageMid shadow-xs mb-12 flex-wrap gap-1 sm:gap-2" data-aos="fade-up">
+      <label for="show-lang" id="label-lang" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Languages</label>
+      <label for="show-framework" id="label-framework" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Frameworks</label>
+      <label for="show-tools" id="label-tools" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Tools</label>
     </div>
 
-    <!-- Languages Container -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5" id="lang-container">
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Python</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5" id="lang-container">
+      
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/python.png" alt="Python" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Python</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Java</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/java.png" alt="Java" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Java</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">JavaScript</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/javascript.png" alt="JavaScript" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">JavaScript</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PHP</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/php.png" alt="PHP" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">PHP</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">HTML</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Markup</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/html.png" alt="HTML" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">HTML</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Markup</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">CSS</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Stylesheet</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/css.png" alt="CSS" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">CSS</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Stylesheet</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Kotlin</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
-      </div>
     </div>
 
-    <!-- Frameworks Container -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 hidden" id="framework-container">
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Laravel</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Web Framework</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 hidden" id="framework-container">
+      
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/laravel.png" alt="Laravel" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Laravel</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Framework</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Tailwind CSS</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Framework</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/tailwind.png" alt="Tailwind CSS" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Tailwind CSS</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Framework</span>
       </div>
+
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/scikit.png" alt="Scikit-learn" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Scikit-learn</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
+      </div>
+
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/numpy.png" alt="NumPy" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">NumPy</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
+      </div>
+
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/pandas.png" alt="Pandas" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Pandas</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
+      </div>
+
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/matplotlib.png" alt="Matplotlib" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Matplotlib</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
+      </div>
+
     </div>
 
-    <!-- Tools Container -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 hidden" id="tools-container">
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Database</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 hidden" id="tools-container">
+      
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/postgresql.png" alt="PostgreSQL" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Database</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Power BI</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Data Visualization</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/powerbi.png" alt="Power BI" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Power BI</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Data Vis</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">VSCode</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Code Editor</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta transition-all flex justify-between items-center text-left shadow-2xs">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/jupyter.png" alt="Jupyter" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Jupyter</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Notebook</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">GitHub</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Version Control</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/vscode.png" alt="VSCode" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">VSCode</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Editor</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Figma</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/github.png" alt="GitHub" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">GitHub</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Version Control</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Canva</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/figma.png" alt="Figma" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Figma</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">UI / UX</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">G Suite</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/canva.png" alt="Canva" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Canva</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Design</span>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">MS Apps</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/google.png" alt="G Suite" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">G Suite</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Workspace</span>
       </div>
+
+      <div class="group bg-white rounded-2xl p-4 border border-sageMid/80 hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left">
+        <div class="flex items-center gap-2.5">
+          <img src="pics/tech/msapps.png" alt="MS Apps" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
+          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">MS Apps</span>
+        </div>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Office Suite</span>
+      </div>
+
     </div>
+
   </div>
 </section>
