@@ -13,7 +13,7 @@
   }
 
   body {
-    background-color: #F4F8F5; /* Matches layout clean base configuration tint */
+    background-color: #F4F8F5; /* Matches layout clean mint-white base tint */
     color: #1A2E1A;
   }
 }
@@ -40,15 +40,6 @@
   .bg-tealCta { background-color: #2E6E50; }
   .bg-tealDark { background-color: #1A4A34; }
   .border-sageBorder { border-color: #B4C4B4; }
-}
-
-/* === Scale Animation === */
-@keyframes scale-up-hor-center {
-  0%   { transform: scaleX(0.4); }
-  100% { transform: scaleX(1);   }
-}
-.scale-up-hor-center {
-  animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 /* === Nav Link Underline Effect === */
@@ -85,13 +76,13 @@ nav a:hover::after {
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-lang:checked ~ div #framework-container {
+#show-lang:checked ~ #framework-container {
   display: none !important;
 }
-#show-lang:checked ~ div #tools-container {
+#show-lang:checked ~ #tools-container {
   display: none !important;
 }
-#show-lang:checked ~ div #lang-container {
+#show-lang:checked ~ #lang-container {
   display: grid !important;
 }
 
@@ -100,13 +91,13 @@ nav a:hover::after {
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-framework:checked ~ div #lang-container {
+#show-framework:checked ~ #lang-container {
   display: none !important;
 }
-#show-framework:checked ~ div #tools-container {
+#show-framework:checked ~ #tools-container {
   display: none !important;
 }
-#show-framework:checked ~ div #framework-container {
+#show-framework:checked ~ #framework-container {
   display: grid !important;
 }
 
@@ -115,13 +106,13 @@ nav a:hover::after {
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-tools:checked ~ div #lang-container {
+#show-tools:checked ~ #lang-container {
   display: none !important;
 }
-#show-tools:checked ~ div #framework-container {
+#show-tools:checked ~ #framework-container {
   display: none !important;
 }
-#show-tools:checked ~ div #tools-container {
+#show-tools:checked ~ #tools-container {
   display: grid !important;
 }
 
@@ -134,12 +125,14 @@ nav a:hover::after {
   box-shadow: 0 8px 24px rgba(46, 110, 80, 0.12);
 }
 
+/* Unified Project Card Physics */
 .proj-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 3px solid #2E6E50; /* Premium branded top accent bar */
 }
 .proj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(46, 110, 80, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(46, 110, 80, 0.15);
 }
 
 /* === Custom Scrollbar Configuration === */
