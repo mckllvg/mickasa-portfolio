@@ -1,5 +1,5 @@
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
+let typedTextSpan;
+let cursorSpan;
 
 const textArray = ["mi casa.", "mickasa."];
 const typingDelay = 200;
@@ -9,6 +9,8 @@ let textArrayIndex = 0;
 let charIndex = 0;
 
 function type() {
+  if (!typedTextSpan || !cursorSpan) return;
+
   if (charIndex < textArray[textArrayIndex].length) {
     if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
@@ -21,6 +23,8 @@ function type() {
 }
 
 function erase() {
+  if (!typedTextSpan || !cursorSpan) return;
+
   if (charIndex > 0) {
     if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
@@ -75,6 +79,40 @@ function initAOS() {
   }
 }
 
+function initTechnologyInteractivity() {
+  const tabLabels = document.querySelectorAll('#technologies .skill-tab');
+  const radios = document.querySelectorAll('#technologies input[name="skill-toggle"]');
+
+  const setActiveTab = () => {
+    const checked = document.querySelector('#technologies input[name="skill-toggle"]:checked');
+    tabLabels.forEach(label => label.classList.toggle('active', label.getAttribute('for') === checked?.id));
+  };
+
+  tabLabels.forEach(label => {
+    label.addEventListener('click', () => {
+      const radio = document.getElementById(label.htmlFor);
+      if (radio) radio.checked = true;
+      setActiveTab();
+    });
+  });
+
+  radios.forEach(radio => radio.addEventListener('change', setActiveTab));
+  setActiveTab();
+
+  const cards = document.querySelectorAll('#technologies .group');
+  cards.forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.addEventListener('click', () => card.classList.toggle('selected'));
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.classList.toggle('selected');
+      }
+    });
+  });
+}
+
 function closeMobileNav() {
   const mobileNavToggleBtn = document.getElementById('mobile-nav-toggle');
   const mobileNavMenu = document.getElementById('mobile-nav-menu');
@@ -126,8 +164,12 @@ async function init() {
   });
 
   initAOS();
+  initTechnologyInteractivity();
 
-  if (textArray.length) {
+  typedTextSpan = document.querySelector(".typed-text");
+  cursorSpan = document.querySelector(".cursor");
+
+  if (typedTextSpan && cursorSpan && textArray.length) {
     setTimeout(type, newTextDelay + 250);
   }
 }

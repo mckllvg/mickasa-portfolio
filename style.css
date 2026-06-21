@@ -69,6 +69,24 @@ nav a:hover::after {
   background-color: #C0D4C0;
   color: #1A2E1A;
 }
+.skill-tab.active {
+  background-color: #2E6E50;
+  color: #F4F8F5;
+  border-color: #2E6E50;
+}
+
+#technologies .group {
+  cursor: pointer;
+}
+#technologies .group:focus-visible {
+  outline: 2px solid #2E6E50;
+  outline-offset: 4px;
+}
+#technologies .group.selected {
+  background-color: #F4F8F5;
+  border-color: #2E6E50;
+  box-shadow: 0 14px 40px rgba(46, 110, 80, 0.12);
+}
 
 /* === Pure CSS Selection Engine (3-way toggle) === */
 #show-lang:checked ~ div #label-lang {
