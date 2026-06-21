@@ -7,7 +7,7 @@
 
   <!-- Fonts and Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="logo1.png" type="image/png">
+  <link rel="icon" href="pics/me/logo.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -41,7 +41,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-sageBase text-textDark font-inter">
+<body class="bg-sageBase text-textDark font-inter relative overflow-x-hidden">
+  
+  <!--Ambient Teal Dawn Glow (Top Center)-->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[1000px] h-[450px] md:h-[600px] pointer-events-none -z-10"
+       style="background-image: radial-gradient(circle at top center, rgba(56, 193, 182, 0.45), transparent 70%); filter: blur(80px);">
+  </div>
+  
   
   <header class="sticky top-0 z-50 w-full px-8 md:px-16 flex justify-between items-center py-4 bg-sageBase/80 backdrop-blur-md border-b border-sageBorder/40">
     <a href="#home">
@@ -49,7 +55,7 @@
     </a>
     <nav>
       <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
-        <li><a href="#home"         class="hover:text-tealCta transition-colors">home</a></li>
+        <li><a href="#index"         class="hover:text-tealCta transition-colors">home</a></li>
         <li><a href="#about"        class="hover:text-tealCta transition-colors">about</a></li>
         <li><a href="#technologies" class="hover:text-tealCta transition-colors">tech</a></li>
         <li><a href="#projects"     class="hover:text-tealCta transition-colors">projects</a></li>
@@ -61,7 +67,7 @@
   <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
     <div class="max-w-3xl" data-aos="fade-up">
       <span class="inline-block bg-sageAccent text-tealDark text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
-        data analyst · machine learning · ui/ux design
+       data analyst · machine learning · insight-driven solutions
       </span>
 
       <h1 class="font-sora text-5xl md:text-6xl font-bold text-textDark leading-tight mb-5">
