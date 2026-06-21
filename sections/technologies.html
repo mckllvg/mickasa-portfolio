@@ -5,149 +5,116 @@
     <p class="text-textHint text-sm mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
 
     <input type="radio" id="show-lang" name="skill-toggle" class="hidden" checked />
-    <input type="radio" id="show-design" name="skill-toggle" class="hidden" />
+    <input type="radio" id="show-framework" name="skill-toggle" class="hidden" />
+    <input type="radio" id="show-tools" name="skill-toggle" class="hidden" />
 
-    <div class="inline-flex items-center justify-center p-1.5 bg-white/80 backdrop-blur-md rounded-full border border-sageMid shadow-xs mb-14" data-aos="fade-up" data-aos-delay="150">
+    <div class="inline-flex items-center justify-center p-1.5 bg-white/80 backdrop-blur-md rounded-full border border-sageMid shadow-xs mb-14 flex-wrap gap-2" data-aos="fade-up" data-aos-delay="150">
       <label for="show-lang" id="label-lang"
         class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
-        Languages & Frameworks
+        Languages
       </label>
-      <label for="show-design" id="label-design"
+      <label for="show-framework" id="label-framework"
         class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
-        Design & Tools
+        Frameworks
+      </label>
+      <label for="show-tools" id="label-tools"
+        class="skill-tab px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">
+        Tools
       </label>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5" id="skills-grid">
-
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/python.png" alt="Python" class="w-7 h-7 object-contain" />
-        </div>
+    <!-- Languages Container -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5" id="lang-container">
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Python</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="50">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/java.png" alt="Java" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Java</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/javascript.png" alt="JavaScript" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">JavaScript</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="50">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/php.png" alt="PHP" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="50">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PHP</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="150">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/html.png" alt="HTML" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">HTML</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Markup</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/css.png" alt="CSS" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">CSS</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Stylesheet</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/postgresql.png" alt="PostgreSQL" class="w-7 h-7 object-contain" />
-        </div>
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Database</p>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Kotlin</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Language</p>
       </div>
+    </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/powerbi.png" alt="Power BI" class="w-7 h-7 object-contain" />
-        </div>
-        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Power BI</p>
-        <p class="text-[11px] font-semibold text-textHint mt-0.5">Data Visualization</p>
-      </div>
-
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/laravel.png" alt="Laravel" class="w-7 h-7 object-contain" />
-        </div>
+    <!-- Frameworks Container -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 hidden" id="framework-container">
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Laravel</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Web Framework</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="lang" data-aos="fade-up" data-aos-delay="150">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/tailwind.png" alt="Tailwind" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="150">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Tailwind CSS</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Framework</p>
       </div>
+    </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/vscode.png" alt="VSCode" class="w-7 h-7 object-contain" />
-        </div>
+    <!-- Tools Container -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 hidden" id="tools-container">
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Database</p>
+      </div>
+
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
+        <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Power BI</p>
+        <p class="text-[11px] font-semibold text-textHint mt-0.5">Data Visualization</p>
+      </div>
+
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">VSCode</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Code Editor</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/github.png" alt="GitHub" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">GitHub</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Version Control</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/figma.png" alt="Figma" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Figma</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/canva.png" alt="Canva" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">Canva</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Design Tool</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/google.png" alt="G Suite" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">G Suite</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
       </div>
 
-      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center" data-cat="design">
-        <div class="w-14 h-14 rounded-2xl bg-sageBase flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:bg-tealCta/10 transition-all duration-300 shadow-inner">
-          <img src="pics/tech/msapps.png" alt="MS Apps" class="w-7 h-7 object-contain" />
-        </div>
+      <div class="skill-card group bg-white rounded-3xl p-5 border border-sageMid/60 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center">
         <p class="text-sm font-bold text-textDark group-hover:text-tealCta transition-colors">MS Apps</p>
         <p class="text-[11px] font-semibold text-textHint mt-0.5">Productivity</p>
       </div>
-
     </div>
   </div>
 </section>

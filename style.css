@@ -79,174 +79,50 @@ nav a:hover::after {
   color: #1A2E1A;
 }
 
-/* === Pure CSS Selection Engine === */
+/* === Pure CSS Selection Engine (3-way toggle) === */
 #show-lang:checked ~ div #label-lang {
   background-color: #2E6E50;
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-lang:checked ~ #skills-grid [data-cat="design"] {
+#show-lang:checked ~ div #framework-container {
   display: none !important;
 }
+#show-lang:checked ~ div #tools-container {
+  display: none !important;
+}
+#show-lang:checked ~ div #lang-container {
+  display: grid !important;
+}
 
-#show-design:checked ~ div #label-design {
+#show-framework:checked ~ div #label-framework {
   background-color: #2E6E50;
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-design:checked ~ #skills-grid [data-cat="lang"] {
+#show-framework:checked ~ div #lang-container {
   display: none !important;
 }
-
-/* === Cards Interaction Models === */
-.skill-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+#show-framework:checked ~ div #tools-container {
+  display: none !important;
 }
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(46, 110, 80, 0.12);
+#show-framework:checked ~ div #framework-container {
+  display: grid !important;
 }
 
-.proj-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.proj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(46, 110, 80, 0.14);
-}
-
-/* === Custom Scrollbar Configuration === */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #E7EFE9;
-}
-::-webkit-scrollbar-thumb {
-  background: #B4C4B4;
-  border-radius: 999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2E6E50;
-}
-
-/* === Custom Blinking Typing Cursor Framework === */
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background-color: #2E6E50;
-  margin-left: 2px;
-  vertical-align: baseline;
-  animation: cursor-blink 1s step-end infinite;
-}
-
-@keyframes cursor-blink {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0; }
-}
-
-.cursor.typing {
-  animation: none;
-  opacity: 1;
-}/* === Import Fonts === */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
-
-/* === Tailwind Directives === */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* === Custom Theme via Tailwind Layer === */
-@layer base {
-  html {
-    font-family: 'Inter', sans-serif;
-  }
-
-  body {
-    background-color: #F4F8F5; /* Matches layout clean base configuration tint */
-    color: #1A2E1A;
-  }
-}
-
-/* === Custom Font Classes === */
-@layer utilities {
-  .font-sora {
-    font-family: 'Sora', sans-serif;
-  }
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-/* === Custom Colors === */
-@layer utilities {
-  .bg-sageBase { background-color: #F4F8F5; }
-  .bg-sageMid { background-color: #E7EFE9; }
-  .bg-sageAccent { background-color: #C0D4C0; }
-  .text-textDark { color: #1A2E1A; }
-  .text-textMuted { color: #4A5E4A; }
-  .text-textHint { color: #6B7A6B; }
-  .text-tealCta { color: #2E6E50; }
-  .bg-tealCta { background-color: #2E6E50; }
-  .bg-tealDark { background-color: #1A4A34; }
-  .border-sageBorder { border-color: #B4C4B4; }
-}
-
-/* === Scale Animation === */
-@keyframes scale-up-hor-center {
-  0%   { transform: scaleX(0.4); }
-  100% { transform: scaleX(1);   }
-}
-.scale-up-hor-center {
-  animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-/* === Nav Link Underline Effect === */
-nav a {
-  position: relative;
-}
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 1.5px;
-  background-color: #2E6E50;
-  transition: width 0.25s ease;
-}
-nav a:hover::after {
-  width: 100%;
-}
-
-/* === Skill Navigation Tabs Base Styles === */
-.skill-tab {
-  background-color: transparent;
-  color: #4A5E4A;
-}
-.skill-tab:hover {
-  background-color: #C0D4C0;
-  color: #1A2E1A;
-}
-
-/* === Pure CSS Selection Engine === */
-#show-lang:checked ~ div #label-lang {
+#show-tools:checked ~ div #label-tools {
   background-color: #2E6E50;
   color: #F4F8F5;
   border-color: #2E6E50;
 }
-#show-lang:checked ~ #skills-grid [data-cat="design"] {
+#show-tools:checked ~ div #lang-container {
   display: none !important;
 }
-
-#show-design:checked ~ div #label-design {
-  background-color: #2E6E50;
-  color: #F4F8F5;
-  border-color: #2E6E50;
-}
-#show-design:checked ~ #skills-grid [data-cat="lang"] {
+#show-tools:checked ~ div #framework-container {
   display: none !important;
+}
+#show-tools:checked ~ div #tools-container {
+  display: grid !important;
 }
 
 /* === Cards Interaction Models === */
@@ -301,24 +177,3 @@ nav a:hover::after {
   animation: none;
   opacity: 1;
 }
-
-.proj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(46, 110, 80, 0.14);
-}
-
-.proj-card {
-  border-top: 3px solid #2E6E50;
-}
-
-/* === Project Card === */
-.proj-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 3px solid #2E6E50;
-}
-
-.proj-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(46, 110, 80, 0.15);
-}
-
