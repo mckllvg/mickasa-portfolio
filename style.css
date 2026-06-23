@@ -13,7 +13,7 @@
   }
 
   body {
-    background-color: #F4F8F5; /* Matches layout clean mint-white base tint */
+    background-color: #FBFBFB; /* less green, near-white base */
     color: #1A2E1A;
   }
 }
@@ -30,9 +30,9 @@
 
 /* === Custom Colors === */
 @layer utilities {
-  .bg-sageBase { background-color: #F4F8F5; }
-  .bg-sageMid { background-color: #E7EFE9; }
-  .bg-sageAccent { background-color: #C0D4C0; }
+  .bg-sageBase { background-color: #FBFBFB; }
+  .bg-sageMid { background-color: #F7F7F7; }
+  .bg-sageAccent { background-color: #EFEFEF; }
   .text-textDark { color: #1A2E1A; }
   .text-textMuted { color: #4A5E4A; }
   .text-textHint { color: #6B7A6B; }
@@ -65,8 +65,8 @@ nav a:hover::after {
   background-color: transparent;
   color: #4A5E4A;
 }
-.skill-tab:hover {
-  background-color: #C0D4C0;
+  .skill-tab:hover {
+  background-color: #EFEFEF;
   color: #1A2E1A;
 }
 .skill-tab.active {
@@ -83,7 +83,7 @@ nav a:hover::after {
   outline-offset: 4px;
 }
 #technologies .group.selected {
-  background-color: #F4F8F5;
+  background-color: #FBFBFB;
   border-color: #2E6E50;
   box-shadow: 0 14px 40px rgba(46, 110, 80, 0.12);
 }
@@ -158,7 +158,7 @@ nav a:hover::after {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #E7EFE9;
+  background: #F7F7F7;
 }
 ::-webkit-scrollbar-thumb {
   background: #B4C4B4;
@@ -188,3 +188,29 @@ nav a:hover::after {
   animation: none;
   opacity: 1;
 }
+
+/* Timeline date tooltip shown when hovering the marker circle */
+.group/item .date-tooltip {
+  position: absolute;
+  left: -140px;
+  top: 50%;
+  transform: translateY(-50%) translateY(4px);
+  background-color: #FBFBFB;
+  border: 1px solid #B4C4B4;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  color: #6B7A6B;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+.group/item:hover .date-tooltip,
+.group/item:focus-within .date-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateY(0);
+  pointer-events: auto;
+}
+

@@ -1,144 +1,212 @@
-<section id="about" class="py-24 bg-sageBase px-6">
-  
-  <div class="max-w-6xl mx-auto" data-aos="fade-up">
-    
-    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark text-center mb-16">about me</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8 items-start">
-      
-      <div class="flex flex-col gap-8">
-        
-        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center group">
-          
-          <div class="relative mb-3">
-            <div class="absolute inset-0 rounded-full bg-tealCta/20 blur-md group-hover:scale-110 transition-transform duration-500"></div>
-            <div class="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
-              <img src="pics/me/Micka.JPG" alt="Alyanna Mickaela Olviga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
+<section id="about" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark text-center mb-16" data-aos="fade-up">about me</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+
+      <!-- LEFT COLUMN -->
+      <div class="flex flex-col gap-6 h-full">
+
+        <!-- Profile Card -->
+        <div class="group bg-sageMid rounded-2xl border border-sageBorder p-7 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300 flex-1" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-sageBase shadow-md mb-4">
+            <img src="pics/me/Micka.JPG" alt="Alyanna Mickaela Olviga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
-          <h3 class="font-sora text-xl font-bold text-textDark mt-1">Alyanna Mickaela B. Olviga</h3>
-          <p class="text-xs font-bold text-tealCta uppercase tracking-wider mt-1">Data Analyst & Software Engineer</p>
+          <h3 class="font-sora text-lg font-bold text-textDark group-hover:text-tealCta transition-colors">Alyanna Mickaela B. Olviga</h3>
+          <p class="text-[11px] font-bold text-tealCta uppercase tracking-wider mt-1">Data Analyst & Software Engineer</p>
           <p class="text-xs text-textHint mt-1.5 flex items-center justify-center gap-1">
             <i class="fa-solid fa-location-dot text-tealCta text-[11px]"></i>
             Manila, Philippines
           </p>
-          
-          <div class="w-full border-t border-sageMid/60 my-5"></div>
-          
-          <div class="bg-sageBase w-full rounded-2xl p-4 border border-sageMid/50 flex items-center justify-between">
-            <div class="text-left pl-1">
+
+          <div class="flex gap-3 mt-4">
+            <a href="mailto:olviga.am@gmail.com" class="w-8 h-8 rounded-full bg-sageBase border border-sageBorder flex items-center justify-center text-textMuted hover:text-tealCta hover:border-tealCta transition-all">
+              <i class="fa-regular fa-envelope text-xs"></i>
+            </a>
+            <a href="https://github.com/mckllvg" target="_blank" class="w-8 h-8 rounded-full bg-sageBase border border-sageBorder flex items-center justify-center text-textMuted hover:text-tealCta hover:border-tealCta transition-all">
+              <i class="fa-brands fa-github text-xs"></i>
+            </a>
+            <a href="https://linkedin.com/in/mckllvg" target="_blank" class="w-8 h-8 rounded-full bg-sageBase border border-sageBorder flex items-center justify-center text-textMuted hover:text-tealCta hover:border-tealCta transition-all">
+              <i class="fa-brands fa-linkedin text-xs"></i>
+            </a>
+          </div>
+
+          <div class="w-full border-t border-sageBorder my-5"></div>
+
+          <div class="bg-sageBase w-full rounded-xl p-4 border border-sageBorder flex items-center justify-between">
+            <div class="text-left">
               <p class="text-[10px] font-bold text-textHint uppercase tracking-wider">Academic Standing</p>
-              <p class="text-xs font-bold text-textDark mt-0.5">Current GPA</p>
+              <p class="text-xs font-semibold text-textDark mt-0.5">Current GPA</p>
             </div>
-            <div class="bg-white px-4 py-1.5 rounded-xl border border-sageMid shadow-xs">
-              <span class="text-xl font-extrabold text-tealCta font-sora">3.73</span>
+            <div class="bg-sageMid px-4 py-1.5 rounded-xl border border-sageBorder">
+              <span class="text-2xl font-extrabold text-tealCta font-sora">3.73</span>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
-          <div class="flex items-center gap-3.5 mb-6">
-            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
-              <i class="fa-solid fa-award text-lg"></i>
+        <!-- Awards Card -->
+        <div class="group bg-sageMid rounded-2xl border border-sageBorder p-7 hover:shadow-lg transition-all duration-300 flex-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-sageAccent text-tealCta flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-award text-base"></i>
             </div>
-            <h4 class="font-sora text-lg font-bold text-textDark">Awards & Recognition</h4>
+            <h4 class="font-sora text-base font-bold text-textDark">Awards & Recognition</h4>
           </div>
-          
-          <ul class="space-y-4 pl-1">
-            <li class="flex items-start gap-3">
-              <span class="text-tealCta mt-0.5 text-sm"><i class="fa-solid fa-circle-check"></i></span>
+
+          <ul class="space-y-5">
+            
+            <!-- Dean's Lister -->
+            <li class="relative group/award flex items-start gap-3 cursor-default">
+              
+              <!-- Checkmark Anchor Wrapper -->
+              <div class="relative mt-0.5 flex-shrink-0">
+                
+                <!-- Hover Tooltip -->
+                <div class="absolute left-1/2 -top-5 -translate-x-1/2 pointer-events-none opacity-0 group-hover/award:opacity-100 group-hover/award:-top-7 transition-all duration-300 z-30">
+                  <div class="bg-tealCta text-sageBase text-[10px] font-bold py-1 px-2.5 rounded-md shadow-md whitespace-nowrap relative">
+                    2022 – 2026
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-tealCta"></span>
+                  </div>
+                </div>
+
+                <!-- Checkmark Circle -->
+                <span class="w-5 h-5 rounded-full bg-sageAccent text-tealCta flex items-center justify-center group-hover/award:scale-125 group-hover/award:bg-tealCta group-hover/award:text-sageBase transition-all duration-200">
+                  <i class="fa-solid fa-check text-[10px]"></i>
+                </span>
+              </div>
+
               <div>
                 <h5 class="font-bold text-textDark text-xs uppercase tracking-wide">Consistent Dean's Lister</h5>
-                <p class="text-xs text-textMuted leading-relaxed mt-1 font-medium">Recognized consistently for maintaining exceptional academic standing throughout the program.</p>
+                <p class="text-xs text-textMuted leading-relaxed mt-1">Recognized consistently for maintaining exceptional academic standing throughout the program.</p>
               </div>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-tealCta mt-0.5 text-sm"><i class="fa-solid fa-circle-check"></i></span>
+
+            <!-- Excellence in Leadership -->
+            <li class="relative group/award flex items-start gap-3 cursor-default">
+              
+              <!-- Checkmark Anchor Wrapper -->
+              <div class="relative mt-0.5 flex-shrink-0">
+                
+                <!-- Hover Tooltip -->
+                <div class="absolute left-1/2 -top-5 -translate-x-1/2 pointer-events-none opacity-0 group-hover/award:opacity-100 group-hover/award:-top-7 transition-all duration-300 z-30">
+                  <div class="bg-tealCta text-sageBase text-[10px] font-bold py-1 px-2.5 rounded-md shadow-md whitespace-nowrap relative">
+                    2024 – 2025
+                    <span class="absolute top-full left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-tealCta"></span>
+                  </div>
+                </div>
+
+                <!-- Checkmark Circle -->
+                <span class="w-5 h-5 rounded-full bg-sageAccent text-tealCta flex items-center justify-center group-hover/award:scale-125 group-hover/award:bg-tealCta group-hover/award:text-sageBase transition-all duration-200">
+                  <i class="fa-solid fa-check text-[10px]"></i>
+                </span>
+              </div>
+
               <div>
                 <h5 class="font-bold text-textDark text-xs uppercase tracking-wide">Excellence in Leadership</h5>
-                <p class="text-xs text-textMuted leading-relaxed mt-1 font-medium">Recognized for leadership as Public Relations Officer (Internal), CS Program Council.</p>
+                <p class="text-xs text-textMuted leading-relaxed mt-1">Recognized for leadership as Public Relations Officer (Internal), CS Program Council.</p>
               </div>
             </li>
+
           </ul>
         </div>
 
       </div>
 
-      <div class="md:col-span-2 space-y-8">
-        
-        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
-          <div class="flex items-center gap-3.5 mb-5">
-            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
-              <i class="fa-solid fa-graduation-cap text-lg"></i>
+      <!-- RIGHT COLUMN -->
+      <div class="flex flex-col gap-6 h-full">
+
+        <!-- Education Card -->
+        <div class="group bg-sageMid rounded-2xl border border-sageBorder p-7 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-sageAccent text-tealCta flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-graduation-cap text-base"></i>
             </div>
-            <h4 class="font-sora text-lg font-bold text-textDark">Education</h4>
+            <h4 class="font-sora text-base font-bold text-textDark">Education</h4>
           </div>
 
-          <div class="bg-sageBase/60 rounded-2xl p-5 border border-sageMid/50">
-            <div class="flex flex-wrap justify-between items-baseline gap-x-2 mb-1">
-              <h5 class="font-bold text-textDark text-base font-sora">Bachelor of Science in Computer Science</h5>
-              <span class="text-xs font-bold text-tealCta bg-white px-3.5 py-1 rounded-full border border-sageMid shadow-xs">2022 - 2026</span>
+          <div class="bg-sageBase rounded-xl p-5 border border-sageBorder">
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-1">
+              <h5 class="font-bold text-textDark text-sm font-sora">Bachelor of Science in Computer Science</h5>
+              <span class="text-[11px] font-bold text-tealCta bg-sageAccent px-3 py-1 rounded-full flex-shrink-0">2022 – 2026</span>
             </div>
-            <p class="text-xs font-bold text-textMuted mb-4.5 pl-0.5">De La Salle University - Dasmariñas</p>
-            
-            <div class="inline-flex items-center gap-2 text-xs font-bold text-tealDark bg-tealCta/10 px-3 py-1.5 rounded-xl border border-tealCta/15">
+            <p class="text-xs text-textMuted mb-3 pl-0.5">De La Salle University – Dasmariñas</p>
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-tealDark bg-sageAccent px-3 py-1.5 rounded-xl">
               <i class="fa-solid fa-microchip text-[11px]"></i>
-              <span>Specializing in Intelligent Systems</span>
+              Specializing in Intelligent Systems
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl p-7 border border-sageMid/60 shadow-xs hover:shadow-xl transition-all duration-300">
-          <div class="flex items-center gap-3.5 mb-8">
-            <div class="w-10 h-10 rounded-2xl bg-tealCta/10 text-tealCta flex items-center justify-center font-bold shadow-inner">
-              <i class="fa-solid fa-briefcase text-lg"></i>
+        <!-- Experience Card -->
+        <div class="group bg-sageMid rounded-2xl border border-sageBorder p-7 hover:shadow-lg transition-all duration-300 flex-1" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex items-center gap-3 mb-7">
+            <div class="w-10 h-10 rounded-xl bg-sageAccent text-tealCta flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-briefcase text-base"></i>
             </div>
-            <h4 class="font-sora text-lg font-bold text-textDark">Experience & Leadership</h4>
+            <h4 class="font-sora text-base font-bold text-textDark">Experience & Leadership</h4>
           </div>
-          
-          <div class="space-y-6 relative border-l-2 border-sageMid ml-3 pl-6">
 
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta group-hover:scale-125 group-hover:shadow-md transition-all"></span>
+          <div class="space-y-6 relative border-l-2 border-sageBorder ml-2 pl-6">
+
+            <!-- MIESCOR -->
+            <div class="relative group/item cursor-default">
+              <!-- Timeline Circle -->
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sageBase border-4 border-tealCta group-hover/item:scale-125 transition-all duration-200 z-10"></span>
               
-              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
-                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">Software Engineer Intern</h5>
+              <!-- Hover Tooltip (Centered above the circle) -->
+              <div class="absolute -left-[23px] -top-5 -translate-x-1/2 pointer-events-none opacity-0 group-hover/item:opacity-100 group-hover/item:-top-7 transition-all duration-300 z-30">
+                <div class="bg-tealCta text-sageBase text-[10px] font-bold py-1 px-2.5 rounded-md shadow-md whitespace-nowrap relative">
+                  Jun – Aug 2025
+                  <!-- Downward pointing tooltip arrow -->
+                  <span class="absolute top-full left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-tealCta"></span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1.5">
+                <h5 class="font-bold text-textDark text-sm font-sora">Software Engineer Intern</h5>
                 <span class="text-xs font-bold text-tealCta">@ MIESCOR</span>
-                <span class="text-[11px] font-medium text-textHint ml-auto bg-sageBase px-2.5 py-0.5 rounded-md">June - Aug 2025</span>
               </div>
-              
-              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
-                Engineered a centralized Laravel platform to automate cross-department SAP approval workflows.
-              </p>
+              <p class="text-xs text-textMuted leading-relaxed">Engineered a centralized Laravel platform to automate cross-department SAP approval workflows.</p>
             </div>
 
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta/70 group-hover:scale-125 group-hover:border-tealCta group-hover:shadow-md transition-all"></span>
+            <!-- CS Council -->
+            <div class="relative group/item cursor-default">
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sageBase border-4 border-tealCta/70 group-hover/item:scale-125 group-hover/item:border-tealCta transition-all duration-200 z-10"></span>
               
-              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
-                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">PR Officer (Internal)</h5>
+              <!-- Hover Tooltip -->
+              <div class="absolute -left-[23px] -top-5 -translate-x-1/2 pointer-events-none opacity-0 group-hover/item:opacity-100 group-hover/item:-top-7 transition-all duration-300 z-30">
+                <div class="bg-tealCta text-sageBase text-[10px] font-bold py-1 px-2.5 rounded-md shadow-md whitespace-nowrap relative">
+                  2024 – 2025
+                  <span class="absolute top-full left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-tealCta"></span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1.5">
+                <h5 class="font-bold text-textDark text-sm font-sora">PR Officer (Internal)</h5>
                 <span class="text-xs font-bold text-tealCta">@ CS Program Council</span>
-                <span class="text-[11px] font-medium text-textHint ml-auto bg-sageBase px-2.5 py-0.5 rounded-md">2024 - 2025</span>
               </div>
-
-              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
-                Spearheaded student-faculty communications and managed event logistics for the department.
-              </p>
+              <p class="text-xs text-textMuted leading-relaxed">Spearheaded student-faculty communications and managed event logistics for the department.</p>
             </div>
 
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-tealCta/40 group-hover:scale-125 group-hover:border-tealCta group-hover:shadow-md transition-all"></span>
+            <!-- Student Assistant -->
+            <div class="relative group/item cursor-default">
+              <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sageBase border-4 border-tealCta/40 group-hover/item:scale-125 group-hover/item:border-tealCta transition-all duration-200 z-10"></span>
               
-              <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
-                <h5 class="font-bold text-textDark text-sm sm:text-base font-sora">Student Assistant</h5>
-                <span class="text-xs font-bold text-tealCta">@ DLSU-D</span>
-                <span class="text-[10px] font-extrabold text-tealDark bg-sageAccent/40 px-2 py-0.5 rounded-md ml-auto">8x Scholar</span>
+              <!-- Hover Tooltip -->
+              <div class="absolute -left-[23px] -top-5 -translate-x-1/2 pointer-events-none opacity-0 group-hover/item:opacity-100 group-hover/item:-top-7 transition-all duration-300 z-30">
+                <div class="bg-tealDark text-sageAccent text-[10px] font-extrabold py-1 px-2.5 rounded-md shadow-md whitespace-nowrap relative">
+                  8x Scholar
+                  <span class="absolute top-full left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-tealDark"></span>
+                </div>
               </div>
 
-              <p class="text-xs sm:text-sm text-textMuted leading-relaxed font-medium max-w-lg">
-                Managed university document workflows, data verification, and student admissions processing.
-              </p>
+              <div class="flex flex-wrap items-baseline gap-1.5 mb-1.5">
+                <h5 class="font-bold text-textDark text-sm font-sora">Student Assistant</h5>
+                <span class="text-xs font-bold text-tealCta">@ DLSU-D</span>
+              </div>
+              <p class="text-xs text-textMuted leading-relaxed">Managed university document workflows, data verification, and student admissions processing.</p>
             </div>
 
           </div>
