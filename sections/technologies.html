@@ -1,202 +1,159 @@
 <section id="technologies" class="py-24 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-
-    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textDark mb-3" data-aos="fade-up">technologies</h2>
-    <p class="text-textHint text-sm mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">tools & languages I work with</p>
-
+  <div class="max-w-5xl mx-auto text-center">
+   <h2 class="font-sora text-4xl md:text-5xl font-bold text-textMain mb-3" data-aos="fade-up">my pegboard</h2>
+<p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">the tools & languages hanging in my workspace</p>
     <input type="radio" id="show-lang" name="skill-toggle" class="hidden" checked />
     <input type="radio" id="show-framework" name="skill-toggle" class="hidden" />
     <input type="radio" id="show-tools" name="skill-toggle" class="hidden" />
 
     <!-- Tab Pills -->
-    <div class="inline-flex items-center justify-center p-1.5 bg-sageMid rounded-full border border-sageBorder shadow-xs mb-12 flex-wrap gap-1 sm:gap-2" data-aos="fade-up" data-aos-delay="150">
-      <label for="show-lang" id="label-lang" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Languages</label>
-      <label for="show-framework" id="label-framework" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Frameworks</label>
-      <label for="show-tools" id="label-tools" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer select-none">Tools</label>
+    <div class="inline-flex items-center justify-center p-1.5 bg-homeCard rounded-full border border-homeBorder shadow-xs mb-8 flex-wrap gap-1 sm:gap-2" data-aos="fade-up">
+      <label for="show-lang" id="label-lang" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer">Languages</label>
+      <label for="show-framework" id="label-framework" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer">Frameworks</label>
+      <label for="show-tools" id="label-tools" class="skill-tab px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer">Tools</label>
     </div>
-
-    <!-- Languages -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5" id="lang-container">
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/python.png" alt="Python" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Python</span>
+    
+    <!-- Magnetic Board Container -->
+    <div class="magnetic-board p-8 md:p-14 relative mx-auto max-w-4xl" data-aos="zoom-in">
+      
+      <!-- Languages -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 gap-y-10" id="lang-container">
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/python.png" alt="Python" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Python</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Language</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/java.png" alt="Java" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Java</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Language</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/javascript.png" alt="JavaScript" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">JavaScript</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Language</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/php.png" alt="PHP" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">PHP</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Language</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/html.png" alt="HTML" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">HTML</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Markup</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/css.png" alt="CSS" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">CSS</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Stylesheet</span>
+        </div>
       </div>
 
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/java.png" alt="Java" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Java</span>
+      <!-- Frameworks -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 gap-y-10 hidden" id="framework-container">
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/laravel.png" alt="Laravel" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Laravel</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Framework</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/tailwind.png" alt="Tailwind CSS" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Tailwind CSS</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Framework</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/scikit.png" alt="Scikit-learn" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Scikit-learn</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Library</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/numpy.png" alt="NumPy" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">NumPy</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Library</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/pandas.png" alt="Pandas" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Pandas</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Library</span>
+        </div>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/matplotlib.png" alt="Matplotlib" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Matplotlib</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Library</span>
+        </div>
       </div>
 
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/javascript.png" alt="JavaScript" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">JavaScript</span>
+      <!-- Tools -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 gap-y-10 hidden" id="tools-container">
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/postgresql.png" alt="PostgreSQL" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">PostgreSQL</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Database</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/php.png" alt="PHP" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">PHP</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/powerbi.png" alt="Power BI" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Power BI</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Data Viz</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Language</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/html.png" alt="HTML" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">HTML</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/jupyter.png" alt="Jupyter" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Jupyter</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Notebook</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Markup</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/css.png" alt="CSS" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">CSS</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/vscode.png" alt="VSCode" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">VSCode</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Editor</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Stylesheet</span>
-      </div>
-
-    </div>
-
-    <!-- Frameworks -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 hidden" id="framework-container">
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/laravel.png" alt="Laravel" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Laravel</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/github.png" alt="GitHub" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">GitHub</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Version Control</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Framework</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/tailwind.png" alt="Tailwind CSS" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Tailwind CSS</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/figma.png" alt="Figma" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Figma</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">UI / UX</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Framework</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/scikit.png" alt="Scikit-learn" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Scikit-learn</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/canva.png" alt="Canva" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">Canva</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Design</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/numpy.png" alt="NumPy" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">NumPy</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/google.png" alt="G Suite" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">G Suite</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Workspace</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/pandas.png" alt="Pandas" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Pandas</span>
+        <div class="paper-note">
+          <div class="magnet"></div>
+          <img src="pics/tech/msapps.png" alt="MS Apps" class="w-10 h-10 mb-2 object-contain" />
+          <span class="font-handwriting font-bold text-2xl text-textMain mb-1">MS Apps</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-textMuted opacity-70">Office Suite</span>
         </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/matplotlib.png" alt="Matplotlib" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Matplotlib</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Library</span>
-      </div>
-
-    </div>
-
-    <!-- Tools -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 hidden" id="tools-container">
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/postgresql.png" alt="PostgreSQL" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">PostgreSQL</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Database</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/powerbi.png" alt="Power BI" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Power BI</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Data Viz</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/jupyter.png" alt="Jupyter" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Jupyter</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Notebook</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/vscode.png" alt="VSCode" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">VSCode</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Editor</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/github.png" alt="GitHub" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">GitHub</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Version Control</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/figma.png" alt="Figma" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Figma</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">UI / UX</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="0">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/canva.png" alt="Canva" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">Canva</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Design</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="50">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/google.png" alt="G Suite" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">G Suite</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Workspace</span>
-      </div>
-
-      <div class="group bg-sageMid rounded-2xl p-4 border border-sageBorder hover:border-tealCta hover:shadow-md transition-all flex justify-between items-center text-left" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex items-center gap-2.5">
-          <img src="pics/tech/msapps.png" alt="MS Apps" class="w-4 h-4 object-contain group-hover:scale-110 transition-transform" />
-          <span class="font-sora font-bold text-sm text-textDark group-hover:text-tealCta transition-colors">MS Apps</span>
-        </div>
-        <span class="text-[10px] font-bold uppercase tracking-wider text-textHint bg-sageBase px-2.5 py-1 rounded-md">Office Suite</span>
       </div>
 
     </div>
-
   </div>
 </section>

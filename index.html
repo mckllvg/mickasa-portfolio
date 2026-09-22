@@ -5,86 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mickasa</title>
 
-  <!-- Fonts and Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts and Icons (Added Hi Melody, Just Me Again Down Here, & Nanum Pen Script) -->
+  <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Just+Me+Again+Down+Here&family=Nanum+Pen+Script&family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="pics/me/logo.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Tailwind CSS Framework -->
+  <!-- Tailwind CSS Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            sageBase:   '#F4F8F5', /* Clean mint-white tint background */
-            sageMid:    '#E7EFE9', /* Soft complementing contrast mid-tone */
-            sageAccent: '#C0D4C0',
-            sageBorder: '#B4C4B4',
-            tealCta:    '#2E6E50',
-            tealDark:   '#1A4A34',
-            textDark:   '#1A2E1A',
-            textMuted:  '#4A5E4A',
-            textHint:   '#6B7A6B',
+            homeBg: '#FDF8F5',     
+            homeCard: '#F4EBE1',   
+            homeBorder: '#DDC7B2', 
+            primary: '#E07A5F',    
+            primaryDark: '#C25A40',
+            secondary: '#81B29A',  
+            accent: '#F2CC8F',     
+            accentBlue: '#3D5A80', 
+            textMain: '#2B2D42',   
+            textMuted: '#68737D',  
+            textHint: '#A3B18A',   
           },
           fontFamily: {
-            sora:  ['Sora', 'sans-serif'],
+            sora: ['Sora', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
+            
+            /* Available for you to swap and test */
+            himelody: ['"Hi Melody"', 'cursive'],
+            justme: ['"Just Me Again Down Here"', 'cursive'],
+            nanum: ['"Nanum Pen Script"', 'cursive'], 
+            
+            /* Currently Active Handwriting Font */
+            handwriting: ['"Hi Melody"', 'cursive'], 
           }
         },
       },
     }
   </script>
   
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-sageBase text-textDark font-inter relative overflow-x-hidden">
+<body class="text-textMain font-inter relative overflow-x-hidden">
   
-  <!--Ambient Teal Dawn Glow (Top Center)-->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] md:w-[1000px] h-[450px] md:h-[600px] pointer-events-none -z-10"
-       style="background-image: radial-gradient(circle at top center, rgba(56, 193, 182, 0.45), transparent 70%); filter: blur(80px);">
-  </div>
-  
-  
-  <header class="sticky top-0 z-50 w-full px-8 md:px-16 flex justify-between items-center py-4 bg-sageBase/80 backdrop-blur-md border-b border-sageBorder/40">
+  <!-- Interactive Background Canvas -->
+  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none -z-10" aria-hidden="true"></canvas>
+
+  <header class="sticky top-0 z-50 w-full px-8 md:px-16 flex justify-between items-center py-4 bg-homeBg/80 backdrop-blur-md border-b border-homeBorder/40 shadow-sm">
     <a href="#home">
-      <h1 class="text-xl font-bold text-textDark">mickasa.</h1>
+      <h1 class="text-xl font-bold text-textMain font-sora">mickasa.</h1>
     </a>
     <div class="flex items-center gap-4">
-      <button id="mobile-nav-toggle" type="button" class="md:hidden text-textMuted hover:text-tealCta transition-colors" aria-controls="mobile-nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+      <button id="mobile-nav-toggle" type="button" class="md:hidden text-textMuted hover:text-primary transition-colors" aria-controls="mobile-nav-menu" aria-expanded="false" aria-label="Open navigation menu">
         <i class="fa-solid fa-bars text-xl"></i>
       </button>
       <nav class="hidden md:block">
         <ul class="flex space-x-7 text-sm font-semibold text-textMuted tracking-wide">
-          <li><a href="#home"         class="hover:text-tealCta transition-colors">home</a></li>
-          <li><a href="#about"        class="hover:text-tealCta transition-colors">about</a></li>
-          <li><a href="#technologies" class="hover:text-tealCta transition-colors">tech</a></li>
-          <li><a href="#projects"     class="hover:text-tealCta transition-colors">projects</a></li>
-          <li><a href="#contact"      class="hover:text-tealCta transition-colors">contact</a></li>
+          <li><a href="#home" class="hover:text-primary transition-colors">home</a></li>
+          <li><a href="#about" class="hover:text-primary transition-colors">about</a></li>
+          <li><a href="#technologies" class="hover:text-primary transition-colors">tech</a></li>
+          <li><a href="#projects" class="hover:text-primary transition-colors">projects</a></li>
+          <li><a href="#contact" class="hover:text-primary transition-colors">contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div id="mobile-nav-menu" class="hidden md:hidden bg-sageBase/95 border-b border-sageBorder/40 shadow-sm">
+  
+  <div id="mobile-nav-menu" class="hidden md:hidden bg-homeBg/95 border-b border-homeBorder/40 shadow-sm">
     <ul class="flex flex-col gap-2 px-6 py-4 text-sm font-semibold text-textMuted tracking-wide">
-      <li><a href="#home"         class="block hover:text-tealCta transition-colors">home</a></li>
-      <li><a href="#about"        class="block hover:text-tealCta transition-colors">about</a></li>
-      <li><a href="#technologies" class="block hover:text-tealCta transition-colors">tech</a></li>
-      <li><a href="#projects"     class="block hover:text-tealCta transition-colors">projects</a></li>
-      <li><a href="#contact"      class="block hover:text-tealCta transition-colors">contact</a></li>
+      <li><a href="#home" class="block hover:text-primary transition-colors">home</a></li>
+      <li><a href="#about" class="block hover:text-primary transition-colors">about</a></li>
+      <li><a href="#technologies" class="block hover:text-primary transition-colors">tech</a></li>
+      <li><a href="#projects" class="block hover:text-primary transition-colors">projects</a></li>
+      <li><a href="#contact" class="block hover:text-primary transition-colors">contact</a></li>
     </ul>
   </div>
 
-    <div data-include="sections/home.html"></div>
-    <div data-include="sections/about.html"></div>
-    <div data-include="sections/technologies.html"></div>
-    <div data-include="sections/projects.html"></div>
-    <div data-include="sections/contact.html"></div>
-  <!-- Structural Animation Scripts Execution Layer -->
+  <!-- Fragment Loaders -->
+  <div data-include="sections/home.html"></div>
+  <div data-include="sections/about.html"></div>
+  <div data-include="sections/technologies.html"></div>
+  <div data-include="sections/projects.html"></div>
+  <div data-include="sections/contact.html"></div>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script src="background.js"></script>
 </body>
 </html>

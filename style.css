@@ -1,216 +1,198 @@
-/* === Import Fonts === */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
-
-/* === Tailwind Directives === */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Just+Me+Again+Down+Here&family=Nanum+Pen+Script&family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* === Custom Theme via Tailwind Layer === */
-@layer base {
-  html {
-    font-family: 'Inter', sans-serif;
-  }
-
-  body {
-    background-color: #FBFBFB; /* less green, near-white base */
-    color: #1A2E1A;
-  }
+html { 
+  background-color: #FDF8F5; /* Sets homeBg safely at the back */
+  scroll-behavior: smooth; 
 }
+body { background-color: transparent; }
 
-/* === Custom Font Classes === */
-@layer utilities {
-  .font-sora {
-    font-family: 'Sora', sans-serif;
-  }
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-/* === Custom Colors === */
-@layer utilities {
-  .bg-sageBase { background-color: #FBFBFB; }
-  .bg-sageMid { background-color: #F7F7F7; }
-  .bg-sageAccent { background-color: #EFEFEF; }
-  .text-textDark { color: #1A2E1A; }
-  .text-textMuted { color: #4A5E4A; }
-  .text-textHint { color: #6B7A6B; }
-  .text-tealCta { color: #2E6E50; }
-  .bg-tealCta { background-color: #2E6E50; }
-  .bg-tealDark { background-color: #1A4A34; }
-  .border-sageBorder { border-color: #B4C4B4; }
-}
-
-/* === Nav Link Underline Effect === */
-nav a {
-  position: relative;
-}
+/* === Navbar Underline === */
+nav a { position: relative; }
 nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 1.5px;
-  background-color: #2E6E50;
-  transition: width 0.25s ease;
+  content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px;
+  background-color: #E07A5F; transition: width 0.3s ease;
 }
-nav a:hover::after {
-  width: 100%;
-}
+nav a:hover::after { width: 100%; }
 
-/* === Skill Navigation Tabs Base Styles === */
-.skill-tab {
-  background-color: transparent;
-  color: #4A5E4A;
-}
-  .skill-tab:hover {
-  background-color: #EFEFEF;
-  color: #1A2E1A;
-}
-.skill-tab.active {
-  background-color: #2E6E50;
-  color: #F4F8F5;
-  border-color: #2E6E50;
-}
-
-#technologies .group {
-  cursor: pointer;
-}
-#technologies .group:focus-visible {
-  outline: 2px solid #2E6E50;
-  outline-offset: 4px;
-}
-#technologies .group.selected {
-  background-color: #FBFBFB;
-  border-color: #2E6E50;
-  box-shadow: 0 14px 40px rgba(46, 110, 80, 0.12);
-}
-
-/* === Pure CSS Selection Engine (3-way toggle) === */
-#show-lang:checked ~ div #label-lang {
-  background-color: #2E6E50;
-  color: #F4F8F5;
-  border-color: #2E6E50;
-}
-#show-lang:checked ~ #framework-container {
-  display: none !important;
-}
-#show-lang:checked ~ #tools-container {
-  display: none !important;
-}
-#show-lang:checked ~ #lang-container {
-  display: grid !important;
-}
-
-#show-framework:checked ~ div #label-framework {
-  background-color: #2E6E50;
-  color: #F4F8F5;
-  border-color: #2E6E50;
-}
-#show-framework:checked ~ #lang-container {
-  display: none !important;
-}
-#show-framework:checked ~ #tools-container {
-  display: none !important;
-}
-#show-framework:checked ~ #framework-container {
-  display: grid !important;
-}
-
-#show-tools:checked ~ div #label-tools {
-  background-color: #2E6E50;
-  color: #F4F8F5;
-  border-color: #2E6E50;
-}
-#show-tools:checked ~ #lang-container {
-  display: none !important;
-}
-#show-tools:checked ~ #framework-container {
-  display: none !important;
-}
-#show-tools:checked ~ #tools-container {
-  display: grid !important;
-}
-
-/* === Cards Interaction Models === */
-.skill-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(46, 110, 80, 0.12);
-}
-
-/* Unified Project Card Physics */
-.proj-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 3px solid #2E6E50; /* Premium branded top accent bar */
-}
-.proj-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(46, 110, 80, 0.15);
-}
-
-/* === Custom Scrollbar Configuration === */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #F7F7F7;
-}
-::-webkit-scrollbar-thumb {
-  background: #B4C4B4;
-  border-radius: 999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2E6E50;
-}
-
-/* === Custom Blinking Typing Cursor Framework === */
+/* === Typing Cursor === */
 .cursor {
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background-color: #2E6E50;
-  margin-left: 2px;
-  vertical-align: baseline;
+  display: inline-block; width: 4px; height: 1em;
+  background-color: #E07A5F; margin-left: 4px; vertical-align: text-bottom;
   animation: cursor-blink 1s step-end infinite;
 }
+@keyframes cursor-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.cursor.typing { animation: none; opacity: 1; }
 
-@keyframes cursor-blink {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0; }
+/* === 1. The Welcome Mat === */
+.welcome-mat {
+  background-color: #D3B685;
+  background-image: repeating-linear-gradient(45deg, rgba(43, 45, 66, 0.05) 0px, rgba(43, 45, 66, 0.05) 2px, transparent 2px, transparent 8px);
+  border: 4px dashed #E07A5F; 
+  padding: 0.75rem 2.5rem;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(43, 45, 66, 0.1);
+  transform: perspective(600px) rotateX(20deg) rotateZ(-2deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.welcome-mat:hover {
+  transform: perspective(600px) rotateX(10deg) rotateZ(0deg) translateY(-2px);
+  box-shadow: 0 15px 25px rgba(43, 45, 66, 0.15);
 }
 
-.cursor.typing {
-  animation: none;
-  opacity: 1;
+/* === 2. Gallery Wall Frames (Continuous Floating Hover) === */
+.frame {
+  background: #FFF !important; 
+  border-radius: 2px !important;
+  box-shadow: inset 0 0 0 10px #FDF8F5, inset 0 0 8px 10px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+  /* Origin centered for popping effect */
+  transform-origin: center center; 
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  padding: 2rem;
+  margin-top: 1.5rem;
 }
 
-/* Timeline date tooltip shown when hovering the marker circle */
-.group/item .date-tooltip {
-  position: absolute;
-  left: -140px;
-  top: 50%;
-  transform: translateY(-50%) translateY(4px);
-  background-color: #FBFBFB;
-  border: 1px solid #B4C4B4;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 11px;
-  color: #6B7A6B;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 20;
+/* Base Rest Positions */
+.frame-oak { border: 12px solid #8B5A2B !important; transform: rotate(-1deg); }
+.frame-sage { border: 12px solid #81B29A !important; transform: rotate(1.5deg); }
+.frame-white { border: 12px solid #EAEAEA !important; transform: rotate(-0.5deg); }
+
+/* The Nail */
+.frame::before {
+  content: ''; position: absolute; top: -35px; left: 50%; transform: translateX(-50%);
+  width: 12px; height: 12px; border-radius: 50%;
+  background: radial-gradient(circle, #E07A5F, #2B2D42); box-shadow: 0 2px 4px rgba(0,0,0,0.3); z-index: 10;
 }
-.group/item:hover .date-tooltip,
-.group/item:focus-within .date-tooltip {
-  opacity: 1;
-  transform: translateY(-50%) translateY(0);
-  pointer-events: auto;
+/* The Hanging String */
+.frame::after {
+  content: ''; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+  width: 90px; height: 45px; border: 2px solid #DDC7B2; border-bottom: none; border-radius: 50px 50px 0 0; z-index: -1;
 }
 
+/* === CONTINUOUS MOVING ANIMATIONS === */
+@keyframes float-oak {
+  0%, 100% { transform: translateY(-12px) rotate(-3deg) scale(1.03); }
+  50%      { transform: translateY(-16px) rotate(-1deg) scale(1.03); }
+}
+@keyframes float-sage {
+  0%, 100% { transform: translateY(-12px) rotate(3deg) scale(1.03); }
+  50%      { transform: translateY(-16px) rotate(1deg) scale(1.03); }
+}
+@keyframes float-white {
+  0%, 100% { transform: translateY(-12px) rotate(-2deg) scale(1.03); }
+  50%      { transform: translateY(-16px) rotate(0deg) scale(1.03); }
+}
+
+/* Apply the animations and big shadow when hovered */
+.frame-oak:hover {
+  animation: float-oak 2s ease-in-out infinite;
+  z-index: 10;
+  box-shadow: inset 0 0 0 10px #FDF8F5, inset 0 0 8px 10px rgba(0,0,0,0.05), 0 25px 40px rgba(0,0,0,0.2);
+}
+.frame-sage:hover {
+  animation: float-sage 2.2s ease-in-out infinite;
+  z-index: 10;
+  box-shadow: inset 0 0 0 10px #FDF8F5, inset 0 0 8px 10px rgba(0,0,0,0.05), 0 25px 40px rgba(0,0,0,0.2);
+}
+.frame-white:hover {
+  animation: float-white 2.1s ease-in-out infinite;
+  z-index: 10;
+  box-shadow: inset 0 0 0 10px #FDF8F5, inset 0 0 8px 10px rgba(0,0,0,0.05), 0 25px 40px rgba(0,0,0,0.2);
+}
+
+/* === 3. Technologies Tabs & Magnetic Board === */
+.skill-tab { background-color: transparent; color: #68737D; }
+.skill-tab.active { background-color: #E07A5F; color: #FFF; border-color: #E07A5F; }
+
+#show-lang:checked ~ div #label-lang,
+#show-framework:checked ~ div #label-framework,
+#show-tools:checked ~ div #label-tools { background-color: #E07A5F; color: #FFF; }
+
+#show-lang:checked ~ .magnetic-board #lang-container { display: grid !important; }
+#show-lang:checked ~ .magnetic-board #framework-container,
+#show-lang:checked ~ .magnetic-board #tools-container { display: none !important; }
+
+#show-framework:checked ~ .magnetic-board #framework-container { display: grid !important; }
+#show-framework:checked ~ .magnetic-board #lang-container,
+#show-framework:checked ~ .magnetic-board #tools-container { display: none !important; }
+
+#show-tools:checked ~ .magnetic-board #tools-container { display: grid !important; }
+#show-tools:checked ~ .magnetic-board #lang-container,
+#show-tools:checked ~ .magnetic-board #framework-container { display: none !important; }
+
+.magnetic-board {
+  background-color: #F8F9FA; 
+  background-image: radial-gradient(#D3D7CF 3px, transparent 4px);
+  background-size: 30px 30px;
+  background-position: 0 0;
+  border: 12px solid #FFFFFF; 
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.05), 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* Base Paper Note */
+.paper-note {
+  /* Removed the hardcoded white background here so we can colorize them! */
+  aspect-ratio: 1/1; 
+  padding: 1.5rem; 
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border-radius: 2px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer;
+}
+
+/* 🎨 Colorful Sticky Note Palette (Automatically cycles through these 5 colors) */
+.paper-note:nth-child(5n + 1) { background-color: #FEF3C7; } /* Sticky Note Yellow */
+.paper-note:nth-child(5n + 2) { background-color: #FCE4EC; } /* Pastel Pink */
+.paper-note:nth-child(5n + 3) { background-color: #E8F5E9; } /* Mint Green */
+.paper-note:nth-child(5n + 4) { background-color: #E3F2FD; } /* Baby Blue */
+.paper-note:nth-child(5n + 5) { background-color: #FFF3E0; } /* Warm Peach */
+
+/* Organic Rotations */
+.paper-note:nth-child(1n) { transform: rotate(1deg); }
+.paper-note:nth-child(2n) { transform: rotate(-2deg); }
+.paper-note:nth-child(3n) { transform: rotate(1.5deg); }
+
+/* The Magnet */
+.magnet {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  width: 14px; height: 14px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #F4F4F4, #999999);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+/* Hover Effect */
+.paper-note:hover {
+  transform: translateY(-8px) scale(1.05) !important; 
+  z-index: 20; 
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+/* === 4. Projects (Uniform Photos on a Shelf Effect) === */
+.proj-card { 
+  transform-origin: bottom center; 
+  /* Added !important to override AOS inline transition */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; 
+  transform: rotate(0deg); 
+}
+
+/* Uniform lift and slight tilt back when hovered */
+.proj-card:hover {
+  /* Added !important to force the tilt even after AOS loads */
+  transform: translateY(-8px) rotate(1.5deg) scale(1.02) !important;
+  z-index: 10;
+  box-shadow: 0 25px 35px -5px rgba(0,0,0,0.15) !important;
+}
+
+/* === Custom Scrollbar === */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FDF8F5; }
+::-webkit-scrollbar-thumb { background: #E07A5F; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #C25A40; }

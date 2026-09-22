@@ -1,25 +1,43 @@
 <main id="home" class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
-  <div class="max-w-3xl" data-aos="fade-up">
-    <span class="inline-block bg-sageAccent text-tealDark text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide">
-      data analyst · machine learning · ui/ux design
-    </span>
+  <div class="max-w-4xl" data-aos="fade-up">
+    
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <span class="bg-accent/30 text-accentBlue text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">software development</span>
+      <span class="bg-secondary/30 text-accentBlue text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">business analysis</span>
+      <span class="bg-primary/20 text-primary text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">ui/ux design</span>
+    </div>
 
-    <h1 class="font-sora text-5xl md:text-6xl font-bold text-textDark leading-tight mb-5">
-      welcome to
-      <span class="text-tealCta typed-text"></span><span class="cursor"></span>
-    </h1>
+    <!-- The Welcome Line -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-8">
+      
+      <!-- Placemat -->
+      <div class="welcome-mat cursor-default flex items-center justify-center">
+        <p class="font-sora font-bold text-lg tracking-[0.2em] uppercase text-homeBg">Welcome</p>
+      </div>
+
+      <!-- Text and Typing -->
+      <h1 class="font-sora text-4xl md:text-5xl font-bold text-textMain flex items-center">
+        <span class="mr-3 md:mr-4">to</span> 
+        
+        <!-- The invisible box is now wrapped around BOTH the text and the cursor -->
+        <span class="inline-block text-left min-w-[160px] md:min-w-[220px]">
+          <span class="text-primary typed-text"></span><span class="cursor"></span>
+        </span>
+      </h1>
+      
+    </div>
 
     <p class="text-textMuted text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
-      I'm <span class="font-semibold text-textDark">Alyanna Mickaela Olviga</span>, a Data Analyst with a focus on machine learning, data analysis, and insight generation.
+      <p class="text-textMuted text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+  I'm <span class="font-bold text-textMain">Micka</span>. I love bringing ideas to life. From designing intuitive UI/UX workflows and analyzing business processes, to developing software that just makes everyday tasks feel effortless.
+</p>
     </p>
 
-    <div class="flex flex-wrap gap-3 justify-center">
-      <a href="Olviga_Resume.pdf"
-         class="bg-tealCta text-sageBase px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tealDark transition-colors">
+    <div class="flex flex-wrap gap-4 justify-center mt-6">
+      <a href="Olviga_Resume_FS.pdf" class="bg-primary text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-primaryDark shadow-md transition-all">
         Download Resume
       </a>
-      <a href="#projects"
-         class="bg-transparent text-tealCta border border-tealCta px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-sageAccent transition-colors">
+      <a href="#projects" class="bg-transparent text-primary border-2 border-primary px-8 py-3 rounded-full text-sm font-bold hover:bg-primary/10 transition-colors">
         View My Work
       </a>
     </div>

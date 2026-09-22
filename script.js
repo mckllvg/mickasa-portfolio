@@ -2,7 +2,7 @@ let typedTextSpan;
 let cursorSpan;
 
 const textArray = ["mi casa.", "mickasa."];
-const typingDelay = 200;
+const typingDelay = 150;
 const erasingDelay = 100;
 const newTextDelay = 2000;
 let textArrayIndex = 0;
@@ -10,7 +10,6 @@ let charIndex = 0;
 
 function type() {
   if (!typedTextSpan || !cursorSpan) return;
-
   if (charIndex < textArray[textArrayIndex].length) {
     if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
@@ -24,7 +23,6 @@ function type() {
 
 function erase() {
   if (!typedTextSpan || !cursorSpan) return;
-
   if (charIndex > 0) {
     if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
@@ -43,18 +41,20 @@ async function loadSectionFragments() {
   for (const element of includeElements) {
     const src = element.getAttribute('data-include');
     if (!src) continue;
-
     try {
       const response = await fetch(src);
-      if (!response.ok) {
-        console.error(`Failed to load section: ${src} (${response.status})`);
-        continue;
+      if (response.ok) {
+        element.innerHTML = await response.text();
       }
-      element.innerHTML = await response.text();
     } catch (error) {
       console.error(`Error loading section ${src}:`, error);
     }
   }
+}
+
+function toggleMobileNav() {
+  const mobileNavMenu = document.getElementById('mobile-nav-menu');
+  if (mobileNavMenu) mobileNavMenu.classList.toggle('hidden');
 }
 
 function toggleMoreProjects() {
@@ -69,79 +69,19 @@ function toggleMoreProjects() {
     toggleBtn.innerHTML = 'See Less ↑';
   } else {
     toggleBtn.innerHTML = 'See More ↓';
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
   }
-}
-
-function initAOS() {
-  if (window.AOS) {
-    AOS.init({ once: true, duration: 600, offset: 60 });
-  }
-}
-
-function initTechnologyInteractivity() {
-  const tabLabels = document.querySelectorAll('#technologies .skill-tab');
-  const radios = document.querySelectorAll('#technologies input[name="skill-toggle"]');
-
-  const setActiveTab = () => {
-    const checked = document.querySelector('#technologies input[name="skill-toggle"]:checked');
-    tabLabels.forEach(label => label.classList.toggle('active', label.getAttribute('for') === checked?.id));
-  };
-
-  tabLabels.forEach(label => {
-    label.addEventListener('click', () => {
-      const radio = document.getElementById(label.htmlFor);
-      if (radio) radio.checked = true;
-      setActiveTab();
-    });
-  });
-
-  radios.forEach(radio => radio.addEventListener('change', setActiveTab));
-  setActiveTab();
-
-  const cards = document.querySelectorAll('#technologies .group');
-  cards.forEach(card => {
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('role', 'button');
-    card.addEventListener('click', () => card.classList.toggle('selected'));
-    card.addEventListener('keydown', event => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        card.classList.toggle('selected');
-      }
-    });
-  });
-}
-
-function closeMobileNav() {
-  const mobileNavToggleBtn = document.getElementById('mobile-nav-toggle');
-  const mobileNavMenu = document.getElementById('mobile-nav-menu');
-  if (!mobileNavMenu || !mobileNavToggleBtn) return;
-
-  if (!mobileNavMenu.classList.contains('hidden')) {
-    mobileNavMenu.classList.add('hidden');
-    mobileNavToggleBtn.setAttribute('aria-expanded', 'false');
-    mobileNavToggleBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
-  }
-}
-
-function toggleMobileNav() {
-  const mobileNavToggleBtn = document.getElementById('mobile-nav-toggle');
-  const mobileNavMenu = document.getElementById('mobile-nav-menu');
-  if (!mobileNavMenu || !mobileNavToggleBtn) return;
-
-  const isHidden = mobileNavMenu.classList.toggle('hidden');
-  const isOpen = !isHidden;
-  mobileNavToggleBtn.setAttribute('aria-expanded', String(isOpen));
-  mobileNavToggleBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark text-xl"></i>' : '<i class="fa-solid fa-bars text-xl"></i>';
 }
 
 async function init() {
   await loadSectionFragments();
 
-  const projectToggle = document.getElementById('proj-toggle-btn');
-  if (projectToggle) {
-    projectToggle.addEventListener('click', toggleMoreProjects);
+  if (window.AOS) AOS.init({ once: true, duration: 600, offset: 50 });
+
+  typedTextSpan = document.querySelector(".typed-text");
+  cursorSpan = document.querySelector(".cursor");
+  if (typedTextSpan && cursorSpan && textArray.length) {
+    setTimeout(type, 1000);
   }
 
   const mobileNavToggleBtn = document.getElementById('mobile-nav-toggle');
@@ -151,28 +91,14 @@ async function init() {
   }
   if (mobileNavMenu) {
     mobileNavMenu.addEventListener('click', (event) => {
-      if (event.target.closest('a')) {
-        closeMobileNav();
-      }
+      if (event.target.closest('a')) mobileNavMenu.classList.add('hidden');
     });
   }
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
-      closeMobileNav();
-    }
-  });
-
-  initAOS();
-  initTechnologyInteractivity();
-
-  typedTextSpan = document.querySelector(".typed-text");
-  cursorSpan = document.querySelector(".cursor");
-
-  if (typedTextSpan && cursorSpan && textArray.length) {
-    setTimeout(type, newTextDelay + 250);
+  const projectToggle = document.getElementById('proj-toggle-btn');
+  if (projectToggle) {
+    projectToggle.addEventListener('click', toggleMoreProjects);
   }
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
