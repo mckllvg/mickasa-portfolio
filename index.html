@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mickasa</title>
+  <meta name="description" content="Portfolio of Alyanna Mickaela Olviga — software engineer and data analyst specializing in full-stack development, data analysis, and UI/UX design." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Mickasa — Alyanna Mickaela Olviga" />
+  <meta property="og:description" content="Software engineer and data analyst portfolio — projects in full-stack development, data analysis, and UI/UX design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="pics/me/logo.png" />
 
   <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Fonts and Icons (Added Hi Melody, Just Me Again Down Here, & Nanum Pen Script) -->
-  <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Just+Me+Again+Down+Here&family=Nanum+Pen+Script&family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Fonts and Icons (only the handwriting font actually in use: Hi Melody) -->
+  <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="pics/me/logo.png" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -22,47 +29,42 @@
       theme: {
         extend: {
           colors: {
-            homeBg: '#FDF8F5',     
-            homeCard: '#F4EBE1',   
-            homeBorder: '#DDC7B2', 
-            primary: '#E07A5F',    
+            homeBg: '#FDF8F5',
+            homeCard: '#F4EBE1',
+            homeBorder: '#DDC7B2',
+            primary: '#E07A5F',
             primaryDark: '#C25A40',
-            secondary: '#81B29A',  
-            accent: '#F2CC8F',     
-            accentBlue: '#3D5A80', 
-            textMain: '#2B2D42',   
-            textMuted: '#68737D',  
-            textHint: '#A3B18A',   
+            secondary: '#81B29A',
+            accent: '#F2CC8F',
+            accentBlue: '#3D5A80',
+            textMain: '#2B2D42',
+            textMuted: '#68737D',
+            textHint: '#A3B18A',
           },
           fontFamily: {
             sora: ['Sora', 'sans-serif'],
             inter: ['Inter', 'sans-serif'],
-            
-            /* Available for you to swap and test */
-            himelody: ['"Hi Melody"', 'cursive'],
-            justme: ['"Just Me Again Down Here"', 'cursive'],
-            nanum: ['"Nanum Pen Script"', 'cursive'], 
-            
+
             /* Currently Active Handwriting Font */
-            handwriting: ['"Hi Melody"', 'cursive'], 
+            handwriting: ['"Hi Melody"', 'cursive'],
           }
         },
       },
     }
   </script>
-  
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="text-textMain font-inter relative overflow-x-hidden">
-  
+
   <!-- Interactive Background Canvas -->
   <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none -z-10" aria-hidden="true"></canvas>
 
   <header class="sticky top-0 z-50 w-full px-8 md:px-16 flex justify-between items-center py-4 bg-homeBg/80 backdrop-blur-md border-b border-homeBorder/40 shadow-sm">
-   <a href="#home" class="block group">
-  <img src="pics/me/logo.png" alt="Mickasa Logo" class="h-8 w-auto group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300" />
-  </a>
+    <a href="#home" class="block group">
+      <img src="pics/me/logo.png" alt="Mickasa Logo" class="h-8 w-auto group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300" />
+    </a>
     <div class="flex items-center gap-4">
       <button id="mobile-nav-toggle" type="button" class="md:hidden text-textMuted hover:text-primary transition-colors" aria-controls="mobile-nav-menu" aria-expanded="false" aria-label="Open navigation menu">
         <i class="fa-solid fa-bars text-xl"></i>
@@ -78,7 +80,7 @@
       </nav>
     </div>
   </header>
-  
+
   <div id="mobile-nav-menu" class="hidden md:hidden bg-homeBg/95 border-b border-homeBorder/40 shadow-sm">
     <ul class="flex flex-col gap-2 px-6 py-4 text-sm font-semibold text-textMuted tracking-wide">
       <li><a href="#home" class="block hover:text-primary transition-colors">home</a></li>

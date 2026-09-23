@@ -8,6 +8,8 @@ const newTextDelay = 2000;
 let textArrayIndex = 0;
 let charIndex = 0;
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function type() {
   if (!typedTextSpan || !cursorSpan) return;
   if (charIndex < textArray[textArrayIndex].length) {
@@ -45,16 +47,26 @@ async function loadSectionFragments() {
       const response = await fetch(src);
       if (response.ok) {
         element.innerHTML = await response.text();
+      } else {
+        console.error(`Failed to load section ${src}: HTTP ${response.status}`);
       }
     } catch (error) {
-      console.error(`Error loading section ${src}:`, error);
+      // This will fire if the page is opened directly via file:// instead of
+      // through a local server (fetch of local files is blocked by CORS).
+      console.error(`Error loading section ${src}. Are you serving this over http(s):// and not file://?`, error);
     }
   }
 }
 
+// Fix: previously this toggled the menu but never updated aria-expanded,
+// so screen readers always reported the menu as closed.
 function toggleMobileNav() {
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
   const mobileNavMenu = document.getElementById('mobile-nav-menu');
-  if (mobileNavMenu) mobileNavMenu.classList.toggle('hidden');
+  if (!mobileNavMenu || !toggleBtn) return;
+  mobileNavMenu.classList.toggle('hidden');
+  const isOpen = !mobileNavMenu.classList.contains('hidden');
+  toggleBtn.setAttribute('aria-expanded', String(isOpen));
 }
 
 function toggleMoreProjects() {
@@ -76,12 +88,24 @@ function toggleMoreProjects() {
 async function init() {
   await loadSectionFragments();
 
-  if (window.AOS) AOS.init({ once: true, duration: 600, offset: 50 });
+  if (window.AOS) {
+    AOS.init({
+      once: true,
+      duration: prefersReducedMotion ? 0 : 600,
+      offset: 50,
+      disable: prefersReducedMotion
+    });
+  }
 
   typedTextSpan = document.querySelector(".typed-text");
   cursorSpan = document.querySelector(".cursor");
   if (typedTextSpan && cursorSpan && textArray.length) {
-    setTimeout(type, 1000);
+    if (prefersReducedMotion) {
+      // Skip the typing animation entirely; just show the final text.
+      typedTextSpan.textContent = textArray[textArray.length - 1];
+    } else {
+      setTimeout(type, 1000);
+    }
   }
 
   const mobileNavToggleBtn = document.getElementById('mobile-nav-toggle');
@@ -91,7 +115,10 @@ async function init() {
   }
   if (mobileNavMenu) {
     mobileNavMenu.addEventListener('click', (event) => {
-      if (event.target.closest('a')) mobileNavMenu.classList.add('hidden');
+      if (event.target.closest('a')) {
+        mobileNavMenu.classList.add('hidden');
+        mobileNavToggleBtn?.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 

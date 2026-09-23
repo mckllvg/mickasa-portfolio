@@ -1,40 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById('bg-canvas');
-  
+
   if (!canvas) {
     console.warn("Background canvas not found!");
+    return;
+  }
+
+  // Respect people who've asked their OS/browser to reduce motion:
+  // skip the floating-particle animation entirely for them.
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
     return;
   }
 
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
-  
+  let animationId = null;
+  let isPaused = false;
+
   // Colorful warm palette: Gold, Soft Peach, Soft Sage
   const colors = [
-    'rgba(242, 204, 143, ALPHA)', 
-    'rgba(224, 122, 95, ALPHA)', 
+    'rgba(242, 204, 143, ALPHA)',
+    'rgba(224, 122, 95, ALPHA)',
     'rgba(129, 178, 154, ALPHA)'
   ];
 
   function resize() {
-    width = window.innerWidth; 
+    width = window.innerWidth;
     height = window.innerHeight;
-    
+
     // Handle High DPI / Retina displays for crisp particles
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = width * dpr; 
+    canvas.width = width * dpr;
     canvas.height = height * dpr;
     ctx.scale(dpr, dpr);
-    
+
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
 
     particles = [];
-    
+
     const numParticles = width < 768 ? 25 : 55;
-    
-    for(let i = 0; i < numParticles; i++) {
+
+    for (let i = 0; i < numParticles; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -48,28 +57,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function draw() {
+    if (isPaused) return;
+
     ctx.clearRect(0, 0, width, height);
-    
-    for(let p of particles) {
+
+    for (let p of particles) {
       p.y -= p.d;
-      
+
       p.offset += 0.01;
       p.x += Math.sin(p.offset) * 0.3;
-      
-      if (p.y < -10) { 
-        p.y = height + 10; 
-        p.x = Math.random() * width; 
+
+      if (p.y < -10) {
+        p.y = height + 10;
+        p.x = Math.random() * width;
       }
-      
+
       ctx.beginPath();
       ctx.fillStyle = p.c.replace('ALPHA', p.a.toFixed(2));
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
     }
-    requestAnimationFrame(draw);
+    animationId = requestAnimationFrame(draw);
   }
-  
+
+  // Pause the animation loop when the tab isn't visible, to save
+  // battery/CPU instead of drawing frames nobody can see.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      isPaused = true;
+      if (animationId) cancelAnimationFrame(animationId);
+    } else {
+      isPaused = false;
+      draw();
+    }
+  });
+
   window.addEventListener('resize', resize);
-  resize(); 
+  resize();
   draw();
 });

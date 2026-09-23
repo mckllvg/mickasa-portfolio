@@ -1,51 +1,50 @@
 <footer id="contact" class="py-24 px-6 bg-homeBg border-t border-homeBorder/50">
   <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
-   <h2 class="font-sora text-4xl md:text-5xl font-bold text-textMain mb-3" data-aos="fade-up">the mailbox</h2>
-<p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">slide a letter inside if you'd like to collaborate or just say hi</p>
+    
+    <h2 class="font-sora text-4xl md:text-5xl font-bold text-textMain mb-3" data-aos="fade-up">leave a note</h2>
+    <p class="text-textHint text-sm mb-12" data-aos="fade-up" data-aos-delay="100">drop a message on my desk if you'd like to collaborate or chat</p>
 
-    <!-- Interactive Mailbox -->
-    <div class="mailbox-container relative max-w-md mx-auto mb-16 mt-16 pt-8 z-10">
+    <!-- Clean Envelope / Paper Form -->
+    <div class="relative max-w-md mx-auto mb-16 mt-12 z-10">
       
-      <div class="absolute inset-0 bg-accentBlue rounded-t-[100px] rounded-b-xl transform -translate-y-6 border-[8px] border-textMain shadow-inner z-0"></div>
-      
-      <div class="absolute -right-6 top-16 w-4 h-24 bg-primary origin-bottom transform rotate-12 rounded-full border-4 border-textMain z-0 shadow-sm transition-transform duration-300 hover:rotate-[-30deg] cursor-pointer"></div>
-
-      <form action="https://formsubmit.co/olviga.am@gmail.com" method="POST" class="letter-form relative z-10 bg-[#FFFAFA] p-8 shadow-xl border border-gray-200 transition-transform duration-500 hover:-translate-y-12 max-w-[85%] mx-auto pb-14 rounded-sm">
+      <!-- The Form Wrapper (Rotated slightly to look like a physical note) -->
+      <form action="https://formsubmit.co/olviga.am@gmail.com" method="POST" class="relative z-10 bg-[#FFFAFA] p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-200 transition-transform duration-500 hover:-translate-y-2 pb-12 rounded-sm transform rotate-1 cursor-default">
         
-        <div class="absolute top-4 right-4 w-10 h-12 bg-accent/30 border-2 border-accent border-dashed flex items-center justify-center transform rotate-6">
-          <i class="fa-solid fa-heart text-primary text-sm"></i>
+        <!-- Physical Tape holding the note -->
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 transform rotate-2 z-20"></div>
+
+        <!-- Postage Stamp Graphic -->
+        <div class="absolute top-6 right-6 w-12 h-14 bg-white border-2 border-dashed border-gray-300 flex items-center justify-center transform rotate-6 shadow-sm">
+          <i class="fa-solid fa-paper-plane text-primary/60 text-lg"></i>
         </div>
 
         <input type="hidden" name="_subject" value="New inquiry from mickasa">
         <input type="hidden" name="_captcha" value="false">
         
-        <div class="space-y-4 mt-8 text-left font-inter">
+        <div class="space-y-6 mt-12 text-left font-inter">
           <div>
-            <input type="text" name="name" required placeholder="Your Name..." class="w-full bg-transparent border-b-2 border-gray-300 px-2 py-2 text-2xl focus:outline-none focus:border-primary transition-all font-handwriting text-textMain" />
+            <input type="text" name="name" required placeholder="Your Name..." class="w-full bg-transparent border-b-2 border-gray-300 px-2 py-2 text-xl focus:outline-none focus:border-primary transition-all font-handwriting text-textMain placeholder:text-gray-400" />
           </div>
           <div>
-            <input type="email" name="email" required placeholder="Your Email..." class="w-full bg-transparent border-b-2 border-gray-300 px-2 py-2 text-2xl focus:outline-none focus:border-primary transition-all font-handwriting text-textMain" />
+            <input type="email" name="email" required placeholder="Your Email..." class="w-full bg-transparent border-b-2 border-gray-300 px-2 py-2 text-xl focus:outline-none focus:border-primary transition-all font-handwriting text-textMain placeholder:text-gray-400" />
           </div>
           <div>
-            <textarea name="message" rows="3" required placeholder="Write your message here..." class="w-full bg-transparent border-b-2 border-gray-300 p-2 text-2xl focus:outline-none focus:border-primary transition-all resize-none font-handwriting text-textMain"></textarea>
+            <textarea name="message" rows="3" required placeholder="Write your message here..." class="w-full bg-transparent border-b-2 border-gray-300 px-2 py-2 text-xl focus:outline-none focus:border-primary transition-all resize-none font-handwriting text-textMain placeholder:text-gray-400"></textarea>
           </div>
-          <button type="submit" class="w-full bg-primary text-white font-bold font-sora text-sm py-3 rounded-md hover:bg-primaryDark active:scale-95 transition-all shadow-md flex items-center justify-center gap-2 mt-4 cursor-pointer">
+          <button type="submit" class="w-full bg-primary text-white font-bold font-sora text-sm py-4 rounded-sm hover:bg-primaryDark active:scale-95 transition-all shadow-md flex items-center justify-center gap-2 mt-6 cursor-pointer">
             <span>Send Letter</span>
-            <i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </form>
       
-      <div class="absolute bottom-[-16px] left-0 w-full h-20 bg-primary rounded-b-xl border-[8px] border-textMain border-t-0 z-20 flex flex-col items-center justify-center shadow-lg pointer-events-none">
-         <div class="w-24 h-3 bg-textMain rounded-full mb-1"></div>
-         <div class="text-[10px] text-white font-bold uppercase tracking-[0.3em] font-sora">Mail</div>
-      </div>
     </div>
 
+    <!-- Social Links -->
     <div class="flex justify-center gap-6 text-2xl text-textMuted mb-8 mt-10">
-      <a href="mailto:olviga.am@gmail.com" class="hover:text-primary transition-colors"><i class="fa-regular fa-envelope"></i></a>
-      <a href="https://github.com/mckllvg" target="_blank" class="hover:text-primary transition-colors"><i class="fa-brands fa-github"></i></a>
-      <a href="https://linkedin.com/in/mckllvg" target="_blank" class="hover:text-primary transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:olviga.am@gmail.com" class="hover:text-primary transition-colors hover:-translate-y-1 transform"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://github.com/mckllvg" target="_blank" class="hover:text-primary transition-colors hover:-translate-y-1 transform"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/mckllvg" target="_blank" class="hover:text-primary transition-colors hover:-translate-y-1 transform"><i class="fa-brands fa-linkedin"></i></a>
     </div>
     <p class="text-xs text-textHint">© 2026 Alyanna Mickaela Olviga | Last Updated: September 2026</p>
   </div>
