@@ -5,30 +5,57 @@
 
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="projects-wrapper">
 
-      <!-- 1. Beyond Genre -->
+      <!-- 1. Attendly -->
       <div class="proj-card group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer" data-aos="fade-up">
         <div class="w-full h-48 overflow-hidden relative">
-          <img src="pics/projects/spotify-analysis.png" alt="Spotify Analysis" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <img src="pics/projects/attendly.png" alt="Attendly" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
           <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
           <span class="absolute top-3 right-3 bg-accent/90 text-accentBlue text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full backdrop-blur-sm z-10">🚧 WIP</span>
         </div>
         <div class="p-6 flex flex-col flex-grow bg-white">
-          <span class="text-[11px] font-bold tracking-wider uppercase bg-homeCard text-primary px-3.5 py-1 rounded-full w-fit mb-2">Data Analysis · ML</span>
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-homeCard text-primary px-3.5 py-1 rounded-full w-fit mb-2">Full-Stack</span>
           <div class="flex flex-wrap items-center gap-2 mb-3">
-            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Python</span>
-            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">PostgreSQL</span>
+            <!-- TODO: replace with Attendly's real tech stack -->
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Laravel</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Blade</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">SQLite</span>
           </div>
-          <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Beyond Genre</h3>
-          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Leverages K-Means clustering to map 114k+ tracks into mood quadrants and analyze how audio features dictate popularity.</p>
+          <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Attendly</h3>
+          <!-- TODO: replace with Attendly's real description -->
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Attendly is a volunteer and event management platform that replaces manual RSVP tracking with real attendance data, helping organizers monitor no-shows and gain valuable attendance insights.
+</p>
           <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
-            <a href="https://github.com/mckllvg/SpotifyTrack" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
+            <!-- TODO: replace with Attendly's real repo URL -->
+            <a href="https://github.com/mckllvg/attendly" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
               View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- 2. SAP System -->
+      <!-- 2. Contract Clause Checker -->
+      <div class="proj-card group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="pics/projects/contract-checker.png" alt="Contract Clause Checker" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow bg-white">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-homeCard text-primary px-3.5 py-1 rounded-full w-fit mb-2">AI Automation</span>
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">JSON</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">n8n</span>
+          </div>
+          <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Contract Clause Checker</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">A rule-based tool that reads contracts and checks for predefined risk-related words and phrases, then sends a color-coded summary by email. It also detects scanned PDFs and handles errors.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
+            <a href="https://github.com/mckllvg/Contact_Clause_Checker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
+              View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SAP System -->
       <div class="proj-card group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer" data-aos="fade-up" data-aos-delay="100">
         <div class="w-full h-48 overflow-hidden relative">
           <img src="pics/projects/sap.png" alt="SAP System" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
@@ -39,6 +66,7 @@
           <div class="flex flex-wrap items-center gap-2 mb-3">
             <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">PHP</span>
             <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Laravel</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">MySQL</span>
           </div>
           <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">SAP Management System</h3>
           <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Replaced fragmented workflows with a centralized Laravel platform to automate and streamline multi-department approval lifecycles.</p>
@@ -50,8 +78,31 @@
         </div>
       </div>
 
-      <!-- 3. Wake Up Call -->
-      <div class="proj-card group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+      <!-- 4. Beyond Genre (Hidden) -->
+      <div class="proj-card extra-proj hidden group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer">
+        <div class="w-full h-48 overflow-hidden relative">
+          <img src="pics/projects/spotify-analysis.png" alt="Spotify Analysis" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow bg-white">
+          <span class="text-[11px] font-bold tracking-wider uppercase bg-homeCard text-primary px-3.5 py-1 rounded-full w-fit mb-2">Data Analysis · ML</span>
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Python</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">PostgreSQL</span>
+            <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Power BI</span>
+          </div>
+          <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Beyond Genre</h3>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Leverages K-Means clustering to map 114k+ tracks into mood quadrants and analyze how audio features dictate popularity.</p>
+          <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
+            <a href="https://github.com/mckllvg/SpotifyTrack" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
+              View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Wake Up Call (Hidden) -->
+      <div class="proj-card extra-proj hidden group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer">
         <div class="w-full h-48 overflow-hidden relative">
           <img src="pics/projects/wuc.png" alt="Wake Up Call" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
           <div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
@@ -63,7 +114,8 @@
             <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">LightGBM</span>
           </div>
           <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Wake Up Call</h3>
-          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Predicts sleep apnea risk with 98% accuracy utilizing a LightGBM model and clinical questionnaires.</p>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">A mobile-based sleep screening tool that uses a clinically validated questionnaire and a LightGBM model to assess and predict a user’s risk of sleep apnea.
+</p>
           <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
             <a href="https://github.com/mckllvg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
               View Code <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -72,7 +124,7 @@
         </div>
       </div>
 
-      <!-- 4. DLSU-D Website (Hidden) -->
+      <!-- 6. DLSU-D Website (Hidden) -->
       <div class="proj-card extra-proj hidden group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer">
         <div class="w-full h-48 overflow-hidden relative">
           <img src="pics/projects/dlsud.png" alt="DLSU-D Website" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
@@ -84,7 +136,8 @@
             <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Figma</span>
           </div>
           <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">DLSU-D Website</h3>
-          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Showcasing the colleges of DLSU-D through a structured and navigable site design.</p>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">A prototype of the DLSU-D website featuring a structured and navigable layout for exploring each college and its information.
+</p>
           <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
             <a href="https://www.figma.com/proto/5TczZDnT5sT8NJLIXLnCms?node-id=0-1&t=dnhqtlDsPYg0yOMm-6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
               View Design <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -93,7 +146,7 @@
         </div>
       </div>
 
-      <!-- 5. Stellair (Hidden) -->
+      <!-- 7. Stellair (Hidden) -->
       <div class="proj-card extra-proj hidden group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer">
         <div class="w-full h-48 overflow-hidden relative">
           <img src="pics/projects/stellair.png" alt="Stellair" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
@@ -114,7 +167,7 @@
         </div>
       </div>
 
-      <!-- 6. Messenger Revamp (Hidden) -->
+      <!-- 8. Messenger Revamp (Hidden) -->
       <div class="proj-card extra-proj hidden group bg-white rounded-2xl border border-homeBorder text-left flex flex-col overflow-hidden shadow-sm cursor-pointer">
         <div class="w-full h-48 overflow-hidden relative">
           <img src="pics/projects/messenger.png" alt="Messenger Revamp" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
@@ -126,7 +179,8 @@
             <span class="text-[10px] font-bold tracking-wider uppercase bg-gray-100 text-textMain px-3 py-1 rounded-full w-fit">Figma</span>
           </div>
           <h3 class="font-sora text-lg font-bold text-textMain mb-2 group-hover:text-primary transition-colors">Messenger Revamp</h3>
-          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">Messenger redesigned for senior citizens with accessibility and ease of use at its core.</p>
+          <p class="text-textMuted text-sm leading-relaxed flex-grow mb-5">A redesigned Messenger interface for senior citizens, featuring larger icons, simpler navigation, and improved accessibility for easier use.
+</p>
           <div class="flex items-center justify-between pt-4 border-t border-homeBorder/50">
             <a href="https://www.figma.com/proto/xyg89RgrTOoWqYg7bnhOMX?node-id=0-1&t=dnhqtlDsPYg0yOMm-6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary text-xs font-semibold hover:gap-3 transition-all">
               View Design <i class="fa-solid fa-arrow-right text-[10px]"></i>
